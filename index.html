@@ -1,0 +1,541 @@
+<title>Torazo 2026 · Sara, Laura & papá</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --moss: #2d4a3e;
+    --moss-deep: #1c2621;
+    --moss-soft: #3d5f50;
+    --sage: #8ca389;
+    --sage-pale: #d9e0d2;
+    --teja: #b5623a;
+    --teja-deep: #984e2c;
+    --paper: #f2f0e9;
+    --paper-warm: #eae6da;
+    --card: #fbfaf6;
+    --ink: #1c2621;
+    --ink-soft: #4a574f;
+    --line: #d8d4c6;
+    --serif: ui-serif, "Iowan Old Style", "Palatino", "Palatino Linotype", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background:
+      radial-gradient(120% 90% at 80% -10%, rgba(140,163,137,.35), transparent 60%),
+      linear-gradient(160deg, var(--moss) 0%, var(--moss-deep) 100%);
+    color: #f3f2ea;
+    padding: 64px 20px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    /* silueta suave de montaña / valle */
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 70px;
+    background: var(--paper);
+    clip-path: polygon(0 100%, 0 55%, 12% 38%, 24% 60%, 38% 30%, 52% 58%, 66% 34%, 80% 62%, 92% 40%, 100% 58%, 100% 100%);
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin: 0 0 18px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(38px, 9vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .hero h1 em { font-style: italic; color: #e8b79c; }
+  .hero .sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(19px, 4.5vw, 23px);
+    color: #cdd6c6;
+    margin: 0 0 30px;
+  }
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 8px;
+    margin-top: 8px;
+  }
+  .fact {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .02em;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.16);
+    padding: 7px 13px;
+    border-radius: 999px;
+    color: #eef1e9;
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--teja);
+    margin: 56px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ---------- DAY CARDS ---------- */
+  .day {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 10px 30px -22px rgba(28,38,33,.5);
+  }
+  .day-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 20px 22px 14px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(217,224,210,.35), transparent);
+  }
+  .day-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--sage);
+    background: var(--moss);
+    color: #eef1e9;
+    padding: 5px 11px;
+    border-radius: 8px;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .day-title {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1.12;
+    flex: 1;
+  }
+  .day-title .kicker {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--teja);
+    margin-bottom: 3px;
+  }
+  .day-body { padding: 16px 22px 22px; }
+  .day-body p { margin: 0 0 12px; color: var(--ink-soft); }
+  .day-body p:last-child { margin-bottom: 0; }
+  .day-body strong { color: var(--ink); font-weight: 600; }
+
+  .plan-list {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  .plan-list li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--ink-soft);
+  }
+  .plan-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 9px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--sage);
+    border: 1.5px solid var(--moss-soft);
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--line);
+  }
+  .chip {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .01em;
+    padding: 6px 11px;
+    border-radius: 8px;
+    background: var(--paper-warm);
+    color: var(--moss);
+    border: 1px solid var(--line);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .chip.hot { background: #f5e3d8; color: var(--teja-deep); border-color: #e6c3ac; }
+
+  .tag-route { color: var(--teja); }
+
+  /* ---------- REFERENCE PANELS ---------- */
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 22px;
+    margin-bottom: 16px;
+  }
+  .panel h3 {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  .panel h3 .lead {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--teja);
+    display: block;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .panel p { color: var(--ink-soft); margin: 0 0 12px; }
+  .panel p:last-child { margin-bottom: 0; }
+
+  table.tt {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin: 4px 0 2px;
+  }
+  table.tt th, table.tt td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  table.tt th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 600;
+  }
+  table.tt td.num {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--moss);
+    text-align: right;
+    white-space: nowrap;
+  }
+  table.tt tr:last-child td { border-bottom: none; }
+
+  .check {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 520px) { .check { grid-template-columns: 1fr 1fr; } }
+  .check li {
+    position: relative;
+    padding-left: 26px;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    line-height: 1.4;
+  }
+  .check li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 3px;
+    width: 15px; height: 15px;
+    border-radius: 4px;
+    border: 1.5px solid var(--sage);
+    background: var(--card);
+  }
+  .check li.must::before { background: var(--teja); border-color: var(--teja); }
+  .check li.must { color: var(--ink); font-weight: 600; }
+
+  .callout {
+    background: #f5e3d8;
+    border: 1px solid #e6c3ac;
+    border-left: 4px solid var(--teja);
+    border-radius: 10px;
+    padding: 15px 18px;
+    margin: 4px 0 0;
+    font-size: 15px;
+    color: var(--teja-deep);
+  }
+  .callout strong { color: var(--teja-deep); }
+
+  .phone {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--moss);
+    font-weight: 600;
+  }
+  a { color: var(--teja-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+  .note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 54px;
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .04em;
+  }
+  footer .heart { color: var(--teja); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .day { transition: transform .2s ease, box-shadow .2s ease; }
+    .day:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 18px 40px -24px rgba(28,38,33,.55); }
+  }
+</style>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Asturias · Concejo de Cabranes</p>
+    <h1>Cuatro días en <em>Torazo</em></h1>
+    <p class="sub">Sara, Laura y papá — del 5 al 9 de julio de 2026</p>
+    <div class="facts">
+      <span class="fact">🏡 Hostería de Torazo 4★</span>
+      <span class="fact">🚗 Coche propio</span>
+      <span class="fact">🥾 3 rutas de molinos y bosque</span>
+      <span class="fact">🧖 Spa Les Agües</span>
+      <span class="fact">🌤️ Julio · ~22 °C</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="section-label">El plan, día a día</p>
+
+  <!-- DÍA 1 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Dom 5 jul</span>
+      <h2 class="day-title"><span class="kicker">Llegada & aterrizaje rural</span>Torazo, sin prisa</h2>
+    </div>
+    <div class="day-body">
+      <ul class="plan-list">
+        <li><strong>Check-in</strong> en la Hostería de Torazo y deshacer maletas.</li>
+        <li>Paseo por el <strong>pueblo</strong> — Pueblo Ejemplar de Asturias 2008: iglesia de San Martín (1685), hórreos y paneras, casas de indianos y el lavadero de Fontionga. Se ve de sobra en una tarde.</li>
+        <li>Primer baño en la <strong>piscina exterior</strong> para estrenar el modo vacaciones.</li>
+        <li>Cena en <strong>El Balcón de Torazo</strong> (el restaurante del hotel, cocina asturiana con vistas).</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip">🏡 Día en la base</span>
+        <span class="chip">🍽️ Cena en el hotel</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DÍA 2 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Lun 6 jul</span>
+      <h2 class="day-title"><span class="kicker">Ruta 1 · la más redonda</span>Molinos de Bimenes</h2>
+    </div>
+    <div class="day-body">
+      <p>La ruta circular más equilibrada para el grupo: molinos restaurados escalonados junto al río Rozáes, una caída de agua en la parte alta y bosque de castaños y robles.</p>
+      <ul class="plan-list">
+        <li>Salida temprana hacia el <strong>Puente de La Llera</strong> (Rozaes), donde hay aparcamiento de tierra con panel informativo.</li>
+        <li><strong>Circular PR-AS 141 + 142</strong>: ~7 km, ~450 m de desnivel, ~3 h. Dificultad media, asumible de sobra. <em>(Si preferís relajaros: la lineal de solo molinos son ~5,5 km fáciles, ~2 h.)</em></li>
+        <li>Tarde de <strong>relax y piscina</strong> de vuelta en la hostería.</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip">🚗 <span class="num">~30–40 min</span> de coche</span>
+        <span class="chip tag-route">🥾 ~7 km circular · media</span>
+        <span class="chip">🌳 Mucha sombra junto al río</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DÍA 3 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Mar 7 jul</span>
+      <h2 class="day-title"><span class="kicker">Ruta 2 · la más cercana</span>Molinos del Río Profundu</h2>
+    </div>
+    <div class="day-body">
+      <p>En Villaviciosa, la ruta más cercana a la base y la más sombreada — ideal si aprieta el calor. Entre 18 y 22 molinos de agua, la fotogénica cascada del Molín de la Peña y un bosque de ribera húmedo y frondoso.</p>
+      <ul class="plan-list">
+        <li>Coche hasta <strong>Valbúcar</strong> (Amandi). El aparcamiento son plazas al borde de la carretera: <strong>llegad pronto</strong>, se llena en verano.</li>
+        <li><strong>PR-AS 137</strong>, lineal (ida y vuelta por el mismo camino). Podéis dar la vuelta cuando queráis — p. ej. tras el Molín de la Peña — sin obligación de hacer los ~14 km completos.</li>
+        <li>Comida en una <strong>sidrería de Villaviciosa</strong> (a 15 min): Bedriñana —la que ganó "la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip">🚗 <span class="num">~18–22 min</span> de coche</span>
+        <span class="chip tag-route">🥾 lineal, media vuelta a gusto</span>
+        <span class="chip">🍎 Comida sidrería</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DÍA 4 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Mié 8 jul</span>
+      <h2 class="day-title"><span class="kicker">Ruta 3 · la estrella</span>El Camín Encantáu</h2>
+    </div>
+    <div class="day-body">
+      <p>Jornada completa al oriente, en el Valle de Ardisana (Llanes). Un sendero temático con <strong>tallas de madera a tamaño real de la mitología asturiana</strong> —el Trasgu, la Xana, el Nuberu, el Cuélebre, el Busgosu…— cada una con su leyenda. La más divertida de las tres.</p>
+      <ul class="plan-list">
+        <li>Salida pronto: es el trayecto largo. Se aparca en <strong>La Venta</strong> (Ardisana).</li>
+        <li><strong>Circular</strong> de ~9 km, desnivel suave (~250 m), fácil, 3–4 h con paradas para leer las leyendas.</li>
+        <li><strong>Llevad agua y comida</strong>: no hay bares en el recorrido. Al volver, ojo con el tramo de carretera estrecha LL-14.</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip hot">🚗 <span class="num">~1 h 15–1 h 30</span> de coche</span>
+        <span class="chip tag-route">🥾 ~9 km circular · fácil</span>
+        <span class="chip">🧺 Picnic obligatorio</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DÍA 5 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Jue 9 jul</span>
+      <h2 class="day-title"><span class="kicker">Broche & vuelta</span>Spa y despedida</h2>
+    </div>
+    <div class="day-body">
+      <ul class="plan-list">
+        <li>Mañana de <strong>circuito termal "Les Agües"</strong> (90 min): piscina de hidroterapia con cascada, cañón lumbar, chorros y cama de burbujas, sauna, hammam y zona relax. El broche perfecto.</li>
+        <li><strong>Check-out</strong> y vuelta a casa con las pilas cargadas.</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip hot">🧖 Reservar spa por teléfono</span>
+        <span class="chip">👙 Gorro + chanclas obligatorios</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== SPA ===== -->
+  <p class="section-label">El spa, con detalle</p>
+  <div class="panel">
+    <h3><span class="lead">Circuito Les Agües · 90 min</span>Qué incluye</h3>
+    <p>Piscina de hidroterapia (cascada de agua, cañón lumbar, chorros plantares, combis de piernas y cama de burbujas), <strong>pediluvio, sauna, hammam</strong> (baño turco) y zona de relax. Con tratamientos opcionales: masajes con aceites esenciales, chocolaterapia, drenaje linfático, reflexología o masaje Vichy.</p>
+    <div class="callout">
+      <strong>Ojo:</strong> la "piscina interior con chorros" que recuerdas es, casi con seguridad, <strong>esta piscina de hidroterapia del spa</strong> — no una piscina interior aparte. Conviene <strong>llamar al hotel para confirmarlo y reservar</strong> la sesión, y de paso preguntar por los horarios reales de piscina y spa. Acceso al spa: <strong>gorro de baño y chanclas obligatorios</strong>.
+    </div>
+  </div>
+
+  <!-- ===== DISTANCIAS ===== -->
+  <p class="section-label">Tiempos de coche desde Torazo</p>
+  <div class="panel">
+    <p style="margin-bottom:14px">Estimaciones sin tráfico — contrastad en Google Maps el día de salida.</p>
+    <table class="tt">
+      <thead><tr><th>Destino</th><th style="text-align:right">Coche</th></tr></thead>
+      <tbody>
+        <tr><td>Molinos del Río Profundu (Villaviciosa)</td><td class="num">~20 min</td></tr>
+        <tr><td>Villaviciosa villa (sidrerías)</td><td class="num">~19 min</td></tr>
+        <tr><td>Molinos de Bimenes (Puente La Llera)</td><td class="num">~30–40 min</td></tr>
+        <tr><td>Parque Principado (plan B)</td><td class="num">~36 min</td></tr>
+        <tr><td>Camín Encantáu (Ardisana, Llanes)</td><td class="num">~1 h 15–30</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== PLAN B ===== -->
+  <p class="section-label">Plan B — desintoxicación urbana</p>
+  <div class="panel">
+    <h3><span class="lead">Parque Principado · Paredes de Siero</span>Si el orbayu estropea una ruta</h3>
+    <p>Centro comercial grande (+160 tiendas en dos plantas) a ~36 min. La carta para un día de "no verde": <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables. Restauración de sobra (McDonald's, Gino's, La Tagliatella…).</p>
+    <div class="callout">
+      <strong>Cierra los domingos</strong> (ojo, el día de llegada es domingo). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche (2:00 los findes). Encájalo en la tarde de un día de ruta corta o como refugio si llueve.
+    </div>
+  </div>
+
+  <!-- ===== CHECKLIST ===== -->
+  <p class="section-label">Antes de salir & maleta</p>
+  <div class="panel">
+    <h3><span class="lead">Reservas y llamadas</span>Lo que conviene cerrar antes</h3>
+    <ul class="check" style="margin-bottom:20px">
+      <li class="must">Llamar al hotel: reservar spa + confirmar piscinas</li>
+      <li class="must">Reconfirmar tiempos en Google Maps la víspera</li>
+      <li>Preparar picnic para el Camín Encantáu (día 8)</li>
+      <li>Revisar previsión de orbayu por si toca Plan B</li>
+    </ul>
+    <h3><span class="lead">Qué meter en la maleta</span>Julio asturiano</h3>
+    <ul class="check">
+      <li class="must">Calzado de trekking (las tres rutas embarran)</li>
+      <li class="must">Cortavientos / chubasquero ligero (orbayu)</li>
+      <li class="must">Bañador + gorro de baño + chanclas (spa)</li>
+      <li>Ropa de verano ligera (~22 °C de día)</li>
+      <li>Algo de abrigo para mañanas frescas</li>
+      <li>Gorra y protección solar (tramos al sol)</li>
+      <li>Mochila con agua para las rutas</li>
+      <li>Bastones si alguien los usa (opcional)</li>
+    </ul>
+  </div>
+
+  <!-- ===== CONTACTOS ===== -->
+  <p class="section-label">Teléfonos & enlaces</p>
+  <div class="panel">
+    <p><strong>Hostería de Torazo</strong> — <span class="phone">+34 985 89 80 99</span> · <a href="mailto:reservas@hosteriadetorazo.com">reservas@hosteriadetorazo.com</a> · <a href="https://www.hosteriadetorazo.com/">hosteriadetorazo.com</a></p>
+    <p style="margin-bottom:0">Dirección: Plaza de la Sienra, 1 — 33310 Torazo (Cabranes), Asturias.</p>
+  </div>
+
+  <footer>
+    Hecho para Sara, Laura &amp; papá <span class="heart">✦</span> Torazo, julio 2026
+  </footer>
+
+</div>
