@@ -4,10 +4,14 @@ Proyecto personal (no UbiqWare): guía visual de un viaje familiar a la **Hoster
 
 ## Entregable
 
-Un único fichero **`index.html`** autocontenido (CSS inline, fuentes nativas de Apple, sin dependencias externas ni CDN). Se sirve vía **GitHub Pages** en <https://nacho-marin.github.io/torazo-2026/> (público, sin login — para que las hijas lo abran en el móvil).
+Dos páginas autocontenidas (CSS inline, fuentes nativas de Apple, sin dependencias externas ni CDN), servidas vía **GitHub Pages** (público, sin login — para que las hijas lo abran en el móvil):
+- **`index.html`** → <https://nacho-marin.github.io/torazo-2026/> — plan completo (para Nacho).
+- **`teaser.html`** → <https://nacho-marin.github.io/torazo-2026/teaser.html> — resumen sin spoilers para Sara y Laura. **No menciona Parque Principado** (es sorpresa: "desintoxicación rural").
 
 - El diseño es editorial-cálido: paleta verde musgo + óxido teja sobre papel cálido. Móvil-first.
-- Para actualizar: editar `index.html` → commit → `git push`. Pages reconstruye en ~1 min.
+- Ambas llevan meta `http-equiv` de no-cache para que un refresco del navegador baste. **Ojo**: eso NO controla el CDN de GitHub Pages (~10 min de `max-age`, no configurable en Pages). Para saltarse el CDN al verificar, añadir `?v=<timestamp>` a la URL.
+- Nombres: firmar/enumerar siempre como **"Sara, Laura y Papol"** (ver memoria [[papol-nombre-familiar]]).
+- Para actualizar: editar → commit → `git push`. Pages reconstruye en ~1 min.
 
 ## Git
 
