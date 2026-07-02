@@ -23,7 +23,7 @@ Reparto ajustado a la previsión meteorológica real (The Weather Channel, consu
 | Día | Meteo | Plan |
 |---|---|---|
 | Dom 5 | 30° | Llegada + check-in + **comida en El Balcón** + **circuito termal Les Agües por la tarde** + (opcional) pueblo |
-| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + Torazo pueblo + relax |
+| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + **comida en Los Llaureles** (restaurante en Torazo, cita previa 629 76 90 59) + Torazo pueblo + relax |
 | Mar 7 | 27° seco | **Camín Encantáu** (Ardisana, Llanes) — la ruta estrella, jornada completa (~1 h 15–30 de coche, ~9 km circular) |
 | Mié 8 | 27° / 20% | **Ruta corta de mañana** (Molinos del Río Profundu, Villaviciosa, ~20 min) + comida sidrería + **Parque Principado por la tarde** |
 | Jue 9 | 27° | Último baño + check-out + vuelta |
