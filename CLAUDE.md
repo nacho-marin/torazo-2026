@@ -5,8 +5,8 @@ Proyecto personal (no UbiqWare): guía visual de un viaje familiar a la **Hoster
 ## Entregable
 
 Dos páginas autocontenidas (CSS inline, fuentes nativas de Apple, sin dependencias externas ni CDN), servidas vía **GitHub Pages** (público, sin login — para que las hijas lo abran en el móvil):
-- **`index.html`** → <https://nacho-marin.github.io/torazo-2026/> — plan completo (para Nacho).
-- **`teaser.html`** → <https://nacho-marin.github.io/torazo-2026/teaser.html> — resumen sin spoilers para Sara y Laura. **No menciona Parque Principado** (es sorpresa: "desintoxicación rural").
+- **`index.html`** = **el teaser** → <https://nacho-marin.github.io/torazo-2026/> — resumen sin spoilers para Sara y Laura. **No menciona Parque Principado** (es sorpresa: "desintoxicación rural"). Es lo que sirve la raíz, a propósito.
+- **`plan-papol-torazo-idqyy4.html`** = **el plan completo** (para Papol) → URL con nombre poco adivinable, para que no se sirva por descuido al entrar en la raíz. Contiene el itinerario, restaurantes y la sorpresa (Parque Principado). No enlazar desde el teaser.
 
 - El diseño es editorial-cálido: paleta verde musgo + óxido teja sobre papel cálido. Móvil-first.
 - Ambas llevan meta `http-equiv` de no-cache para que un refresco del navegador baste. **Ojo**: eso NO controla el CDN de GitHub Pages (~10 min de `max-age`, no configurable en Pages). Para saltarse el CDN al verificar, añadir `?v=<timestamp>` a la URL.
