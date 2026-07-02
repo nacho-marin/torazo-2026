@@ -458,6 +458,23 @@
   .day-tag.hotel { background: var(--sage-pale); color: var(--moss); }
   .day-tag.ruta { background: #f5e3d8; color: var(--teja-deep); }
   .day-tag.mix { background: var(--paper-warm); color: var(--moss); border: 1px solid var(--line); }
+
+  /* nota transversal (p. ej. desayunos) */
+  .cross-note {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: var(--sage-pale);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--sage);
+    border-radius: 11px;
+    padding: 13px 16px;
+    margin: -4px 0 20px;
+    font-size: 15px;
+    color: var(--moss);
+  }
+  .cross-note .ic { font-size: 20px; line-height: 1; flex-shrink: 0; }
+  .cross-note strong { color: var(--moss-deep); }
 </style>
 
 <header class="hero">
@@ -498,6 +515,10 @@
         <span class="ic">🧢</span>
         <span><b>Gorra y protección solar</b>Hay tramos al sol; y para el spa, <strong>bañador + gorro de baño + chanclas</strong> (obligatorios).</span>
       </div>
+      <div class="prep-item">
+        <span class="ic">👗</span>
+        <span><b>Ropa "de salir"</b>Además del equipo de monte, un conjunto más arreglado para las comidas y cenas — El Balcón de Torazo y las sidrerías tienen su puntito.</span>
+      </div>
     </div>
   </section>
 
@@ -513,6 +534,11 @@
   <p class="wx-note">Fuente: The Weather Channel · reconfirmar la víspera. El <strong>lunes es el día más caluroso (31°)</strong> → lo dejamos de relax en el hotel, sin ruta.</p>
 
   <p class="section-label">El plan, día a día</p>
+
+  <div class="cross-note">
+    <span class="ic">🥐</span>
+    <span><strong>Los desayunos son en el hotel</strong> todas las mañanas — buen combustible antes de cada plan.</span>
+  </div>
 
   <!-- DÍA 1 -->
   <article class="day">
