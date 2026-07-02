@@ -30,9 +30,9 @@ Reparto ajustado a la previsión meteorológica real (The Weather Channel, consu
 | Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + **comida en Los Llaureles** (restaurante en Torazo, cita previa 629 76 90 59) + Torazo pueblo + relax |
 | Mar 7 | 27° seco | **Camín Encantáu** (Ardisana, Llanes) — la ruta estrella, jornada completa (~1 h 15–30 de coche, ~9 km circular) |
 | Mié 8 | 27° / 20% | **Parte del Río Profundu de mañana** (Villaviciosa, ~20 min; se da la vuelta antes) + comida sidrería + **Parque Principado por la tarde**. La versión completa (la de 2020: ida por senda del río hasta Buslaz, vuelta por carretera) son ~19 km / media / 4h40 — queda como opción si se hace la jornada entera (sin Parque ese día). |
-| Jue 9 | 27° | Último baño + check-out + vuelta |
+| Jue 9 | 27° | Check-out + **ruta Misterios del Mar** (Colunga, de camino a casa) + vuelta |
 
-**Ruta alternativa** (intercambiable): **Misterios del Mar** (Colunga, PR-AS 196, circular ~5,9 km, fácil, ~25-30 min) — costera (acantilados, Sierra del Sueve, Lastres, playa de La Isla), para romper el monotema de molinos. Sustituyó a Bimenes por petición del usuario. Nota: discrepancia de desnivel entre fuentes (30 m FEMPA vs 183 m Turismo Colunga), sin reconciliar → no se pone cifra de desnivel.
+**Tres rutas efectivas** (las nenas las quieren las tres): Camín Encantáu (mar), Río Profundu (mié mañana), **Misterios del Mar** (jue, de camino a casa tras el check-out). Misterios del Mar = Colunga, PR-AS 196, circular ~5,9 km, fácil, ~25-30 min, costera (acantilados, Sierra del Sueve, Lastres, playa de La Isla). Nota: discrepancia de desnivel entre fuentes (30 m FEMPA vs 183 m Turismo Colunga), sin reconciliar → no se pone cifra de desnivel. (Bimenes quedó descartada.)
 
 **Dónde cenar** (noches fuera del hotel): sidrerías de Villaviciosa (~20 min). Seguras para cena: **Bedriñana** (985 89 11 52) y **El Roxu** (984 83 31 97, cierra dom noche y lunes). Confirmar por tel.: El Gallineru (984 06 73 69), Sidrería Plaza / Nava (984 84 25 71).
 **Descartado esta vez**: Picos de Europa / Lagos de Covadonga (en julio el bus lanzadera es obligatorio, 1 jun–18 oct).
