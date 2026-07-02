@@ -18,16 +18,18 @@ Un único fichero **`index.html`** autocontenido (CSS inline, fuentes nativas de
 
 ## Plan del viaje (reparto de días)
 
-| Día | Plan |
-|---|---|
-| Dom 5 | Llegada + check-in + Torazo pueblo + piscina exterior + cena en El Balcón de Torazo |
-| Lun 6 | Ruta **Molinos de Bimenes** (circular PR-AS 141+142, ~7 km, media) + relax/piscina |
-| Mar 7 | Ruta **Molinos del Río Profundu** (Villaviciosa, PR-AS 137, lineal, la más cercana) + comida sidrería |
-| Mié 8 | **Camín Encantáu** (Ardisana, Llanes) — jornada completa, la ruta estrella (~1 h 15–30 de coche) |
-| Jue 9 | Spa Les Agües (circuito 90 min) + check-out |
+Reparto ajustado a la previsión meteorológica real (The Weather Channel, consultada 2026-07-02): dom 30°, **lun 31° (día más caluroso)**, mar 27° seco, mié 27°/20% lluvia, jue 27°/18%. Criterio del usuario: evitar ruta el día más caluroso (lunes → hotel); Parque Principado el miércoles.
 
+| Día | Meteo | Plan |
+|---|---|---|
+| Dom 5 | 30° | Llegada + check-in + **comida en El Balcón** + **circuito termal Les Agües por la tarde** + (opcional) pueblo |
+| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + Torazo pueblo + relax |
+| Mar 7 | 27° seco | **Camín Encantáu** (Ardisana, Llanes) — la ruta estrella, jornada completa (~1 h 15–30 de coche, ~9 km circular) |
+| Mié 8 | 27° / 20% | **Ruta corta de mañana** (Molinos del Río Profundu, Villaviciosa, ~20 min) + comida sidrería + **Parque Principado por la tarde** |
+| Jue 9 | 27° | Último baño + check-out + vuelta |
+
+**Ruta alternativa** (intercambiable): Molinos de Bimenes (circular PR-AS 141+142, ~7 km, media, ~30 min). Queda como recambio si el Camín se ve muy largo o para el jueves mañana si sobra tiempo.
 **Descartado esta vez**: Picos de Europa / Lagos de Covadonga (en julio el bus lanzadera es obligatorio, 1 jun–18 oct).
-**Plan B climático**: Parque Principado (Paredes de Siero, ~36 min). Cierra domingos. Para días de orbayu.
 
 ## Datos verificados (fuentes reales)
 

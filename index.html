@@ -346,6 +346,118 @@
     .day { transition: transform .2s ease, box-shadow .2s ease; }
     .day:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 18px 40px -24px rgba(28,38,33,.55); }
   }
+
+  /* ---------- ANTES DE SALIR (tira destacada) ---------- */
+  .prep {
+    background: linear-gradient(160deg, var(--moss-soft), var(--moss));
+    color: #eef1e9;
+    border-radius: 16px;
+    padding: 24px 22px;
+    margin-top: 34px;
+    box-shadow: 0 10px 30px -22px rgba(28,38,33,.6);
+  }
+  .prep h3 {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .prep .prep-lead {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--e8b79c, #e8b79c);
+    color: #e8b79c;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .prep-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 520px) { .prep-grid { grid-template-columns: 1fr 1fr; } }
+  .prep-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 11px;
+    padding: 13px 15px;
+  }
+  .prep-item .ic { font-size: 22px; line-height: 1; flex-shrink: 0; }
+  .prep-item b { display: block; color: #fff; font-size: 15px; margin-bottom: 2px; font-weight: 600; }
+  .prep-item span { font-size: 13.5px; color: #cdd6c6; line-height: 1.45; }
+
+  /* ---------- METEO ---------- */
+  .weather {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 0 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .wx {
+    flex: 1 0 auto;
+    min-width: 88px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 8px 11px;
+  }
+  .wx.hot { border-color: #e6c3ac; background: #f7e8dd; }
+  .wx .wd {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 6px;
+  }
+  .wx.hot .wd { color: var(--teja); }
+  .wx .ico { font-size: 22px; line-height: 1; margin-bottom: 6px; }
+  .wx .tmax {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .wx .tmin {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    margin-top: 2px;
+  }
+  .wx .rain {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--moss-soft);
+    margin-top: 5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .wx-note { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); margin: 8px 0 0; }
+
+  /* etiqueta de plan en la cabecera de día */
+  .day-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .day-tag.hotel { background: var(--sage-pale); color: var(--moss); }
+  .day-tag.ruta { background: #f5e3d8; color: var(--teja-deep); }
+  .day-tag.mix { background: var(--paper-warm); color: var(--moss); border: 1px solid var(--line); }
 </style>
 
 <header class="hero">
@@ -356,14 +468,49 @@
     <div class="facts">
       <span class="fact">🏡 Hostería de Torazo 4★</span>
       <span class="fact">🚗 Coche propio</span>
-      <span class="fact">🥾 3 rutas de molinos y bosque</span>
+      <span class="fact">🥾 2 rutas de molinos y bosque</span>
       <span class="fact">🧖 Spa Les Agües</span>
-      <span class="fact">🌤️ Julio · ~22 °C</span>
+      <span class="fact">🛍️ Parque Principado</span>
     </div>
   </div>
 </header>
 
 <div class="wrap">
+
+  <!-- ===== ANTES DE SALIR ===== -->
+  <section class="prep">
+    <span class="prep-lead">Antes de meter todo en el coche</span>
+    <h3>Lo imprescindible para las rutas</h3>
+    <div class="prep-grid">
+      <div class="prep-item">
+        <span class="ic">👟</span>
+        <span><b>Ropa deportiva</b>Camiseta técnica, pantalón cómodo y <strong>calzado de trekking</strong> con agarre — las rutas de molinos embarran junto al río.</span>
+      </div>
+      <div class="prep-item">
+        <span class="ic">💧</span>
+        <span><b>Botella de agua</b>Una por cabeza. En las rutas no hay fuentes fiables ni bares en el recorrido; llevad también algo de picnic.</span>
+      </div>
+      <div class="prep-item">
+        <span class="ic">🧥</span>
+        <span><b>Cortavientos ligero</b>Por si aparece el orbayu o refresca por la mañana temprano en el bosque.</span>
+      </div>
+      <div class="prep-item">
+        <span class="ic">🧢</span>
+        <span><b>Gorra y protección solar</b>Hay tramos al sol; y para el spa, <strong>bañador + gorro de baño + chanclas</strong> (obligatorios).</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== METEO ===== -->
+  <p class="section-label">La previsión de esos días</p>
+  <div class="weather">
+    <div class="wx"><div class="wd">Dom 5</div><div class="ico">☀️</div><div class="tmax">30°</div><div class="tmin">18°</div><div class="rain">💧 5%</div></div>
+    <div class="wx hot"><div class="wd">Lun 6</div><div class="ico">🌤️</div><div class="tmax">31°</div><div class="tmin">18°</div><div class="rain">💧 1%</div></div>
+    <div class="wx"><div class="wd">Mar 7</div><div class="ico">☀️</div><div class="tmax">27°</div><div class="tmin">16°</div><div class="rain">💧 4%</div></div>
+    <div class="wx"><div class="wd">Mié 8</div><div class="ico">⛅</div><div class="tmax">27°</div><div class="tmin">17°</div><div class="rain">💧 20%</div></div>
+    <div class="wx"><div class="wd">Jue 9</div><div class="ico">⛅</div><div class="tmax">27°</div><div class="tmin">17°</div><div class="rain">💧 18%</div></div>
+  </div>
+  <p class="wx-note">Fuente: The Weather Channel · reconfirmar la víspera. El <strong>lunes es el día más caluroso (31°)</strong> → lo dejamos de relax en el hotel, sin ruta.</p>
 
   <p class="section-label">El plan, día a día</p>
 
@@ -371,18 +518,20 @@
   <article class="day">
     <div class="day-head">
       <span class="day-date">Dom 5 jul</span>
-      <h2 class="day-title"><span class="kicker">Llegada & aterrizaje rural</span>Torazo, sin prisa</h2>
+      <h2 class="day-title"><span class="kicker">Llegada & primer chapuzón termal</span>Torazo, comida y spa</h2>
+      <span class="day-tag hotel">🏡 Hotel</span>
     </div>
     <div class="day-body">
       <ul class="plan-list">
         <li><strong>Check-in</strong> en la Hostería de Torazo y deshacer maletas.</li>
-        <li>Paseo por el <strong>pueblo</strong> — Pueblo Ejemplar de Asturias 2008: iglesia de San Martín (1685), hórreos y paneras, casas de indianos y el lavadero de Fontionga. Se ve de sobra en una tarde.</li>
-        <li>Primer baño en la <strong>piscina exterior</strong> para estrenar el modo vacaciones.</li>
-        <li>Cena en <strong>El Balcón de Torazo</strong> (el restaurante del hotel, cocina asturiana con vistas).</li>
+        <li><strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel, cocina asturiana con vistas) para estrenar el viaje.</li>
+        <li>Por la tarde, <strong>circuito termal "Les Agües"</strong> (90 min): hidroterapia con cascada y chorros, sauna, hammam y zona relax. El mejor arranque posible tras el viaje.</li>
+        <li>Y si queda cuerpo, un paseo por el <strong>pueblo</strong> — Pueblo Ejemplar de Asturias 2008: iglesia de San Martín (1685), hórreos, casas de indianos y el lavadero de Fontionga.</li>
       </ul>
       <div class="meta-row">
-        <span class="chip">🏡 Día en la base</span>
-        <span class="chip">🍽️ Cena en el hotel</span>
+        <span class="chip hot">🧖 Reservar spa por teléfono</span>
+        <span class="chip">🍽️ Comida en el hotel</span>
+        <span class="chip">☀️ 30°</span>
       </div>
     </div>
   </article>
@@ -391,19 +540,20 @@
   <article class="day">
     <div class="day-head">
       <span class="day-date">Lun 6 jul</span>
-      <h2 class="day-title"><span class="kicker">Ruta 1 · la más redonda</span>Molinos de Bimenes</h2>
+      <h2 class="day-title"><span class="kicker">El día más caluroso (31°) · sin ruta</span>Día de piscina y pueblo</h2>
+      <span class="day-tag hotel">🏡 Hotel</span>
     </div>
     <div class="day-body">
-      <p>La ruta circular más equilibrada para el grupo: molinos restaurados escalonados junto al río Rozáes, una caída de agua en la parte alta y bosque de castaños y robles.</p>
+      <p>Con 31° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.</p>
       <ul class="plan-list">
-        <li>Salida temprana hacia el <strong>Puente de La Llera</strong> (Rozaes), donde hay aparcamiento de tierra con panel informativo.</li>
-        <li><strong>Circular PR-AS 141 + 142</strong>: ~7 km, ~450 m de desnivel, ~3 h. Dificultad media, asumible de sobra. <em>(Si preferís relajaros: la lineal de solo molinos son ~5,5 km fáciles, ~2 h.)</em></li>
-        <li>Tarde de <strong>relax y piscina</strong> de vuelta en la hostería.</li>
+        <li>Mañana de <strong>piscina exterior</strong> y tumbona.</li>
+        <li>Paseo tranquilo por <strong>Torazo pueblo</strong> a la hora fresca: iglesia de San Martín (1685), hórreos y paneras, el lavadero de Fontionga y las vistas del valle.</li>
+        <li>Tarde de lectura, siesta o un segundo baño. Cena sin prisa.</li>
       </ul>
       <div class="meta-row">
-        <span class="chip">🚗 <span class="num">~30–40 min</span> de coche</span>
-        <span class="chip tag-route">🥾 ~7 km circular · media</span>
-        <span class="chip">🌳 Mucha sombra junto al río</span>
+        <span class="chip">🏊 Piscina exterior</span>
+        <span class="chip">🏘️ Torazo pueblo</span>
+        <span class="chip hot">☀️ 31° · el más caluroso</span>
       </div>
     </div>
   </article>
@@ -412,35 +562,15 @@
   <article class="day">
     <div class="day-head">
       <span class="day-date">Mar 7 jul</span>
-      <h2 class="day-title"><span class="kicker">Ruta 2 · la más cercana</span>Molinos del Río Profundu</h2>
+      <h2 class="day-title"><span class="kicker">La ruta estrella · jornada completa</span>El Camín Encantáu</h2>
+      <span class="day-tag ruta">🥾 Ruta</span>
     </div>
     <div class="day-body">
-      <p>En Villaviciosa, la ruta más cercana a la base y la más sombreada — ideal si aprieta el calor. Entre 18 y 22 molinos de agua, la fotogénica cascada del Molín de la Peña y un bosque de ribera húmedo y frondoso.</p>
+      <p>Día limpio y fresco (27°): el mejor para la ruta larga. Al oriente, en el Valle de Ardisana (Llanes), un sendero temático con <strong>tallas de madera a tamaño real de la mitología asturiana</strong> —el Trasgu, la Xana, el Nuberu, el Cuélebre, el Busgosu…— cada una con su leyenda. La más divertida de las tres.</p>
       <ul class="plan-list">
-        <li>Coche hasta <strong>Valbúcar</strong> (Amandi). El aparcamiento son plazas al borde de la carretera: <strong>llegad pronto</strong>, se llena en verano.</li>
-        <li><strong>PR-AS 137</strong>, lineal (ida y vuelta por el mismo camino). Podéis dar la vuelta cuando queráis — p. ej. tras el Molín de la Peña — sin obligación de hacer los ~14 km completos.</li>
-        <li>Comida en una <strong>sidrería de Villaviciosa</strong> (a 15 min): Bedriñana —la que ganó "la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
-      </ul>
-      <div class="meta-row">
-        <span class="chip">🚗 <span class="num">~18–22 min</span> de coche</span>
-        <span class="chip tag-route">🥾 lineal, media vuelta a gusto</span>
-        <span class="chip">🍎 Comida sidrería</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- DÍA 4 -->
-  <article class="day">
-    <div class="day-head">
-      <span class="day-date">Mié 8 jul</span>
-      <h2 class="day-title"><span class="kicker">Ruta 3 · la estrella</span>El Camín Encantáu</h2>
-    </div>
-    <div class="day-body">
-      <p>Jornada completa al oriente, en el Valle de Ardisana (Llanes). Un sendero temático con <strong>tallas de madera a tamaño real de la mitología asturiana</strong> —el Trasgu, la Xana, el Nuberu, el Cuélebre, el Busgosu…— cada una con su leyenda. La más divertida de las tres.</p>
-      <ul class="plan-list">
-        <li>Salida pronto: es el trayecto largo. Se aparca en <strong>La Venta</strong> (Ardisana).</li>
+        <li><strong>Salir pronto</strong>: es el trayecto de coche largo. Se aparca en <strong>La Venta</strong> (Ardisana).</li>
         <li><strong>Circular</strong> de ~9 km, desnivel suave (~250 m), fácil, 3–4 h con paradas para leer las leyendas.</li>
-        <li><strong>Llevad agua y comida</strong>: no hay bares en el recorrido. Al volver, ojo con el tramo de carretera estrecha LL-14.</li>
+        <li><strong>Llevad agua y picnic</strong>: no hay bares en el recorrido. Al volver, ojo con el tramo de carretera estrecha LL-14.</li>
       </ul>
       <div class="meta-row">
         <span class="chip hot">🚗 <span class="num">~1 h 15–1 h 30</span> de coche</span>
@@ -450,20 +580,45 @@
     </div>
   </article>
 
+  <!-- DÍA 4 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Mié 8 jul</span>
+      <h2 class="day-title"><span class="kicker">Ruta corta de mañana + desintoxicación urbana</span>Molinos + Parque Principado</h2>
+      <span class="day-tag mix">🥾 Ruta + 🛍️</span>
+    </div>
+    <div class="day-body">
+      <p><strong>Mañana de ruta</strong> (aprovechando el fresco) y <strong>tarde de compras y cine</strong>. Con 20% de lluvia previsto, el plan techado de la tarde encaja de maravilla.</p>
+      <ul class="plan-list">
+        <li><strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, la más cercana, ~20 min). Ruta lineal por bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena. Podéis dar la vuelta cuando queráis, sin hacer los ~14 km enteros. <em>(Alternativa: Molinos de Bimenes, ~7 km circular.)</em></li>
+        <li><strong>Comida</strong> en una sidrería de Villaviciosa (a 15 min): Bedriñana —"la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
+        <li><strong>Tarde — Parque Principado</strong> (~36 min): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.</li>
+      </ul>
+      <div class="meta-row">
+        <span class="chip">🚗 ruta <span class="num">~20 min</span></span>
+        <span class="chip tag-route">🥾 lineal · media vuelta a gusto</span>
+        <span class="chip">🍎 Comida sidrería</span>
+        <span class="chip">🛍️ Parque Principado tarde</span>
+      </div>
+    </div>
+  </article>
+
   <!-- DÍA 5 -->
   <article class="day">
     <div class="day-head">
       <span class="day-date">Jue 9 jul</span>
-      <h2 class="day-title"><span class="kicker">Broche & vuelta</span>Spa y despedida</h2>
+      <h2 class="day-title"><span class="kicker">Vuelta a casa</span>Despedida sin prisa</h2>
+      <span class="day-tag hotel">🏡 Hotel</span>
     </div>
     <div class="day-body">
       <ul class="plan-list">
-        <li>Mañana de <strong>circuito termal "Les Agües"</strong> (90 min): piscina de hidroterapia con cascada, cañón lumbar, chorros y cama de burbujas, sauna, hammam y zona relax. El broche perfecto.</li>
+        <li>Mañana tranquila: último <strong>baño en la piscina</strong> o desayuno largo con vistas.</li>
         <li><strong>Check-out</strong> y vuelta a casa con las pilas cargadas.</li>
+        <li><em>¿Quedó alguna ruta con ganas? Bimenes (~30 min) es cortita si sobra mañana antes de salir.</em></li>
       </ul>
       <div class="meta-row">
-        <span class="chip hot">🧖 Reservar spa por teléfono</span>
-        <span class="chip">👙 Gorro + chanclas obligatorios</span>
+        <span class="chip">🧳 Check-out</span>
+        <span class="chip">🏊 Último chapuzón</span>
       </div>
     </div>
   </article>
@@ -473,8 +628,9 @@
   <div class="panel">
     <h3><span class="lead">Circuito Les Agües · 90 min</span>Qué incluye</h3>
     <p>Piscina de hidroterapia (cascada de agua, cañón lumbar, chorros plantares, combis de piernas y cama de burbujas), <strong>pediluvio, sauna, hammam</strong> (baño turco) y zona de relax. Con tratamientos opcionales: masajes con aceites esenciales, chocolaterapia, drenaje linfático, reflexología o masaje Vichy.</p>
+    <p style="margin-top:12px"><strong>Cuándo:</strong> lo hacemos el <strong>domingo por la tarde</strong>, tras la comida de llegada — el arranque perfecto del viaje.</p>
     <div class="callout">
-      <strong>Ojo:</strong> la "piscina interior con chorros" que recuerdas es, casi con seguridad, <strong>esta piscina de hidroterapia del spa</strong> — no una piscina interior aparte. Conviene <strong>llamar al hotel para confirmarlo y reservar</strong> la sesión, y de paso preguntar por los horarios reales de piscina y spa. Acceso al spa: <strong>gorro de baño y chanclas obligatorios</strong>.
+      <strong>Ojo:</strong> la "piscina interior con chorros" que recuerdas es, casi con seguridad, <strong>esta piscina de hidroterapia del spa</strong> — no una piscina interior aparte. Conviene <strong>llamar al hotel para confirmarlo y reservar</strong> la sesión (mejor asegurar hueco el domingo por la tarde), y de paso preguntar por los horarios reales de piscina y spa. Acceso al spa: <strong>gorro de baño y chanclas obligatorios</strong>.
     </div>
   </div>
 
@@ -487,20 +643,20 @@
       <tbody>
         <tr><td>Molinos del Río Profundu (Villaviciosa)</td><td class="num">~20 min</td></tr>
         <tr><td>Villaviciosa villa (sidrerías)</td><td class="num">~19 min</td></tr>
-        <tr><td>Molinos de Bimenes (Puente La Llera)</td><td class="num">~30–40 min</td></tr>
-        <tr><td>Parque Principado (plan B)</td><td class="num">~36 min</td></tr>
+        <tr><td>Molinos de Bimenes (alternativa)</td><td class="num">~30–40 min</td></tr>
+        <tr><td>Parque Principado (mié tarde)</td><td class="num">~36 min</td></tr>
         <tr><td>Camín Encantáu (Ardisana, Llanes)</td><td class="num">~1 h 15–30</td></tr>
       </tbody>
     </table>
   </div>
 
-  <!-- ===== PLAN B ===== -->
-  <p class="section-label">Plan B — desintoxicación urbana</p>
+  <!-- ===== PARQUE PRINCIPADO ===== -->
+  <p class="section-label">Desintoxicación urbana · miércoles tarde</p>
   <div class="panel">
-    <h3><span class="lead">Parque Principado · Paredes de Siero</span>Si el orbayu estropea una ruta</h3>
+    <h3><span class="lead">Parque Principado · Paredes de Siero</span>El respiro de ciudad</h3>
     <p>Centro comercial grande (+160 tiendas en dos plantas) a ~36 min. La carta para un día de "no verde": <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables. Restauración de sobra (McDonald's, Gino's, La Tagliatella…).</p>
     <div class="callout">
-      <strong>Cierra los domingos</strong> (ojo, el día de llegada es domingo). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche (2:00 los findes). Encájalo en la tarde de un día de ruta corta o como refugio si llueve.
+      <strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.
     </div>
   </div>
 
@@ -509,10 +665,10 @@
   <div class="panel">
     <h3><span class="lead">Reservas y llamadas</span>Lo que conviene cerrar antes</h3>
     <ul class="check" style="margin-bottom:20px">
-      <li class="must">Llamar al hotel: reservar spa + confirmar piscinas</li>
+      <li class="must">Llamar al hotel: reservar spa (dom tarde) + confirmar piscinas</li>
       <li class="must">Reconfirmar tiempos en Google Maps la víspera</li>
-      <li>Preparar picnic para el Camín Encantáu (día 8)</li>
-      <li>Revisar previsión de orbayu por si toca Plan B</li>
+      <li>Preparar picnic para el Camín Encantáu (mar 7)</li>
+      <li>Reconfirmar la previsión del tiempo unos días antes</li>
     </ul>
     <h3><span class="lead">Qué meter en la maleta</span>Julio asturiano</h3>
     <ul class="check">
