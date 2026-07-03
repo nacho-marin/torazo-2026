@@ -10,6 +10,7 @@ Dos páginas autocontenidas (CSS inline, fuentes nativas de Apple, sin dependenc
 
 - El diseño es editorial-cálido: paleta verde musgo + óxido teja sobre papel cálido. Móvil-first.
 - Ambas llevan meta `http-equiv` de no-cache para que un refresco del navegador baste. **Ojo**: eso NO controla el CDN de GitHub Pages (~10 min de `max-age`, no configurable en Pages). Para saltarse el CDN al verificar, añadir `?v=<timestamp>` a la URL.
+- **Despliegue vía GitHub Actions** (`.github/workflows/pages.yml`), NO legacy. El modo `legacy` de Pages se rompió (fallos repetidos `Deployment failed, try again later`); migramos con `gh api -X PUT repos/.../pages -f build_type=workflow` + el workflow oficial. Verificar deploys por el **run de Actions** (`gh run view <id> --json status,conclusion`), no por el estado de `pages/builds` (puede quedar colgado en `errored`/`building`). GitHub tiene baches intermitentes en la fase de deploy aunque su status diga "operational"; reintentar (`gh workflow run pages.yml`) suele resolver. Límites (todos comprobables por API, ninguno fue el problema): Actions ilimitado en repo público, Pages ~10 builds/h, API 5000 req/h.
 - Nombres: firmar/enumerar siempre como **"Sara, Laura y Papol"** (ver memoria [[papol-nombre-familiar]]).
 - Para actualizar: editar → commit → `git push`. Pages reconstruye en ~1 min.
 
