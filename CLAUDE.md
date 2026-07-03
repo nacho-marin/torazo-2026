@@ -27,7 +27,7 @@ Reparto ajustado a la previsión meteorológica real (The Weather Channel, consu
 | Día | Meteo | Plan |
 |---|---|---|
 | Dom 5 | 30° | Llegada + check-in + **comida en El Balcón** + **circuito termal Les Agües por la tarde** + (opcional) pueblo |
-| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + **comida en Los Llaureles** (restaurante en Torazo, cita previa 629 76 90 59) + Torazo pueblo + relax |
+| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + **comida en El Balcón** (hotel; Los Llaureles cerrado hasta 17 jul) + Torazo pueblo + relax + **⚽ España–Portugal 21:00** (octavos; España clasificada) |
 | Mar 7 | 27° seco | **Camín Encantáu** (Ardisana, Llanes) — la ruta estrella, jornada completa (~1 h 15–30 de coche, ~9 km circular) |
 | Mié 8 | 27° / 20% | **Parte del Río Profundu de mañana** (Villaviciosa, ~20 min; se da la vuelta antes) + comida sidrería + **Parque Principado por la tarde**. La versión completa (la de 2020: ida por senda del río hasta Buslaz, vuelta por carretera) son ~19 km / media / 4h40 — queda como opción si se hace la jornada entera (sin Parque ese día). |
 | Jue 9 | 27° | Check-out + **ruta Misterios del Mar** (Colunga, de camino a casa) + vuelta |
