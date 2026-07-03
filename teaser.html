@@ -1,0 +1,376 @@
+<title>¿Nos vamos, chicas? · Torazo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<style>
+  :root {
+    --moss: #2d4a3e;
+    --moss-deep: #1c2621;
+    --moss-soft: #3d5f50;
+    --sage: #8ca389;
+    --sage-pale: #d9e0d2;
+    --teja: #b5623a;
+    --teja-deep: #984e2c;
+    --paper: #f2f0e9;
+    --paper-warm: #eae6da;
+    --card: #fbfaf6;
+    --ink: #1c2621;
+    --ink-soft: #4a574f;
+    --line: #d8d4c6;
+    --serif: ui-serif, "Iowan Old Style", "Palatino", "Palatino Linotype", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px 72px; }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(120% 90% at 80% -10%, rgba(140,163,137,.35), transparent 60%),
+      linear-gradient(160deg, var(--moss) 0%, var(--moss-deep) 100%);
+    color: #f3f2ea;
+    padding: 72px 20px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: -2px; height: 64px;
+    background: var(--paper);
+    clip-path: polygon(0 100%, 0 55%, 12% 38%, 24% 60%, 38% 30%, 52% 58%, 66% 34%, 80% 62%, 92% 40%, 100% 58%, 100% 100%);
+  }
+  .hero-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .28em;
+    text-transform: uppercase; color: var(--sage); margin: 0 0 20px;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(40px, 11vw, 64px); line-height: 1.02;
+    letter-spacing: -0.02em; margin: 0 0 14px; text-wrap: balance;
+  }
+  .hero h1 em { font-style: italic; color: #e8b79c; }
+  .hero .sub {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(18px, 5vw, 22px); color: #cdd6c6; margin: 0;
+  }
+
+  .lead-text {
+    font-size: 18.5px; color: var(--ink-soft);
+    text-align: center; margin: 40px auto 8px; max-width: 30em;
+    text-wrap: pretty;
+  }
+  .lead-text strong { color: var(--ink); }
+
+  .section-label {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--teja);
+    margin: 52px 0 20px; text-align: center;
+  }
+
+  /* tarjetas de "lo que nos espera" */
+  .cards { display: flex; flex-direction: column; gap: 13px; }
+  .tcard {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 15px; padding: 18px 20px;
+    display: flex; gap: 15px; align-items: flex-start;
+    box-shadow: 0 10px 30px -24px rgba(28,38,33,.5);
+  }
+  .tcard .ic {
+    font-size: 27px; line-height: 1; flex-shrink: 0;
+    width: 44px; height: 44px; border-radius: 11px;
+    background: var(--sage-pale); display: flex; align-items: center; justify-content: center;
+  }
+  .tcard h3 {
+    font-family: var(--serif); font-size: 20px; font-weight: 600;
+    margin: 2px 0 4px; letter-spacing: -0.01em;
+  }
+  .tcard p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+
+  .tcard.mystery { background: linear-gradient(160deg, var(--moss-soft), var(--moss)); border-color: var(--moss-soft); }
+  .tcard.mystery .ic { background: rgba(255,255,255,.14); }
+  .tcard.mystery h3 { color: #fff; }
+  .tcard.mystery p { color: #d6ddcf; }
+
+  /* meteo */
+  .weather { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 6px; -webkit-overflow-scrolling: touch; }
+  .wx {
+    flex: 1 0 auto; min-width: 84px; text-align: center;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 12px 8px 11px;
+  }
+  .wx .wd {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--sage); margin-bottom: 6px;
+  }
+  .wx .ico { font-size: 22px; line-height: 1; margin-bottom: 6px; }
+  .wx .tmax { font-family: var(--serif); font-size: 23px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1; }
+  .wx .tmin { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .wx-note { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: center; margin: 10px 0 0; }
+
+  /* maleta */
+  .panel {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 15px; padding: 22px;
+  }
+  .pack { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 11px; }
+  @media (min-width: 460px) { .pack { grid-template-columns: 1fr 1fr; } }
+  .pack li {
+    position: relative; padding-left: 30px;
+    color: var(--ink); font-size: 15.5px; line-height: 1.35;
+  }
+  .pack li .e { position: absolute; left: 0; top: 0; font-size: 18px; }
+
+  footer {
+    text-align: center; margin-top: 52px;
+    font-family: var(--serif); font-style: italic;
+    font-size: 18px; color: var(--moss);
+  }
+  footer .small { display:block; font-family: var(--mono); font-style: normal; font-size: 12px; letter-spacing:.04em; color: var(--ink-soft); margin-top: 10px; }
+
+  /* selector de idioma */
+  .lang-switch {
+    position: fixed; top: 14px; right: 14px; z-index: 50;
+    display: flex; gap: 2px;
+    background: rgba(28,38,33,.55);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 999px; padding: 3px;
+  }
+  .lang-switch button {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .06em;
+    color: #eef1e9; background: transparent; border: 0; cursor: pointer;
+    padding: 5px 11px; border-radius: 999px; line-height: 1;
+    transition: background .15s ease;
+  }
+  .lang-switch button[aria-pressed="true"] { background: var(--teja); color: #fff; }
+  .lang-switch button:hover:not([aria-pressed="true"]) { background: rgba(255,255,255,.14); }
+  .lang-switch button:focus-visible { outline: 2px solid #e8b79c; outline-offset: 2px; }
+</style>
+
+<div class="lang-switch" role="group" aria-label="Idioma / Language">
+  <button type="button" data-lang="es">ES</button>
+  <button type="button" data-lang="en">EN</button>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" data-i18n="eyebrow">Un plan para tres</p>
+    <h1 data-i18n-html="title">¿Nos vamos, <em>chicas</em>?</h1>
+    <p class="sub" data-i18n="sub">Unos días de desconexión en Asturias — Sara, Laura y Papol</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="lead-text" data-i18n-html="lead">No os voy a contar todo… pero os adelanto <strong>lo que nos espera</strong>. El dónde y el cuándo, sorpresa. 😏</p>
+
+  <p class="section-label" data-i18n="s_await">Lo que nos espera</p>
+  <div class="cards">
+
+    <div class="tcard">
+      <span class="ic">🏡</span>
+      <div>
+        <h3 data-i18n="c1_h">Un hotel con encanto</h3>
+        <p data-i18n-html="c1_p">Nos alojamos en la <strong>Hostería de Torazo</strong>, en una aldea preciosa del interior asturiano.</p>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <span class="ic">🏊</span>
+      <div>
+        <h3 data-i18n="c2_h">Piscina y spa</h3>
+        <p data-i18n-html="c2_p">Habrá <strong>piscina</strong> para el chapuzón y un <strong>circuito de spa</strong> para ponernos en modo relax total.</p>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <span class="ic">🍽️</span>
+      <div>
+        <h3 data-i18n="c3_h">Comer y cenar de lujo</h3>
+        <p data-i18n-html="c3_p">Comeremos y cenaremos en <strong>buenos sitios</strong> — cocina asturiana de la de verdad. Preparad el apetito.</p>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <span class="ic">🥾</span>
+      <div>
+        <h3 data-i18n="c4_h">Tres rutas</h3>
+        <p data-i18n-html="c4_p">Haremos <strong>tres rutas</strong> por bosques, molinos y algún que otro rincón mágico. (Ni muy largas ni muy duras, tranquilas.)</p>
+      </div>
+    </div>
+
+    <div class="tcard mystery">
+      <span class="ic">✨</span>
+      <div>
+        <h3 data-i18n="c5_h">Una sorpresa para desconectar del monte</h3>
+        <p data-i18n-html="c5_p">Un día haremos una pequeña <strong>"desintoxicación rural"</strong>… pero no os digo de qué va. Ya lo veréis. 🤫</p>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <span class="ic">🥐</span>
+      <div>
+        <h3 data-i18n="c6_h">Desayunos en el hotel</h3>
+        <p data-i18n-html="c6_p">Cada mañana, <strong>desayuno en la hostería</strong> antes de arrancar el día.</p>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <span class="ic">⚽</span>
+      <div>
+        <h3 data-i18n="c7_h">¡Noche de fútbol!</h3>
+        <p data-i18n-html="c7_p"><strong>España sigue en el Mundial</strong> y una de las noches veremos un partidazo todos juntos. 🇪🇸</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-label" data-i18n="s_weather">El tiempo que hará</p>
+  <div class="weather">
+    <div class="wx"><div class="wd" data-i18n="d_sun">Dom</div><div class="ico">☀️</div><div class="tmax">32°</div><div class="tmin">18°</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_mon">Lun</div><div class="ico">☀️</div><div class="tmax">33°</div><div class="tmin">18°</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_tue">Mar</div><div class="ico">☀️</div><div class="tmax">28°</div><div class="tmin">17°</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_wed">Mié</div><div class="ico">⛅</div><div class="tmax">27°</div><div class="tmin">17°</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_thu">Jue</div><div class="ico">⛅</div><div class="tmax">26°</div><div class="tmin">17°</div></div>
+  </div>
+  <p class="wx-note" data-i18n="wx_note">Sol y buen tiempo · algo de nubes al final. ¡Verano asturiano!</p>
+
+  <p class="section-label" data-i18n="s_pack">Lo imprescindible para las rutas</p>
+  <div class="panel">
+    <ul class="pack">
+      <li><span class="e">👟</span><span data-i18n="p1">Ropa deportiva y calzado de trekking (con agarre)</span></li>
+      <li><span class="e">🎒</span><span data-i18n="p2">Papol lleva mochila con agua, snacks y crema solar</span></li>
+      <li><span class="e">🧥</span><span data-i18n="p3">Un cortavientos ligero por si refresca</span></li>
+      <li><span class="e">🧢</span><span data-i18n="p4">Gorra y protección solar</span></li>
+      <li><span class="e">👙</span><span data-i18n="p5">Bañador (¡y gorro de baño para el spa!)</span></li>
+      <li><span class="e">👗</span><span data-i18n="p6">Algo mono para las comidas y cenas</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    <span data-i18n="foot">Nos lo vamos a pasar genial. 💚</span>
+    <span class="small" data-i18n="foot_sign">Con cariño, Papol</span>
+  </footer>
+
+</div>
+
+<script>
+  const I18N = {
+    es: {
+      _htmllang: "es",
+      _pagetitle: "¿Nos vamos, chicas? · Torazo",
+      eyebrow: "Un plan para tres",
+      title: '¿Nos vamos, <em>chicas</em>?',
+      sub: "Unos días de desconexión en Asturias — Sara, Laura y Papol",
+      lead: 'No os voy a contar todo… pero os adelanto <strong>lo que nos espera</strong>. El dónde y el cuándo, sorpresa. 😏',
+      s_await: "Lo que nos espera",
+      c1_h: "Un hotel con encanto",
+      c1_p: 'Nos alojamos en la <strong>Hostería de Torazo</strong>, en una aldea preciosa del interior asturiano.',
+      c2_h: "Piscina y spa",
+      c2_p: 'Habrá <strong>piscina</strong> para el chapuzón y un <strong>circuito de spa</strong> para ponernos en modo relax total.',
+      c3_h: "Comer y cenar de lujo",
+      c3_p: 'Comeremos y cenaremos en <strong>buenos sitios</strong> — cocina asturiana de la de verdad. Preparad el apetito.',
+      c4_h: "Tres rutas",
+      c4_p: 'Haremos <strong>tres rutas</strong> por bosques, molinos y algún que otro rincón mágico. (Ni muy largas ni muy duras, tranquilas.)',
+      c5_h: "Una sorpresa para desconectar del monte",
+      c5_p: 'Un día haremos una pequeña <strong>"desintoxicación rural"</strong>… pero no os digo de qué va. Ya lo veréis. 🤫',
+      c6_h: "Desayunos en el hotel",
+      c6_p: 'Cada mañana, <strong>desayuno en la hostería</strong> antes de arrancar el día.',
+      c7_h: "¡Noche de fútbol!",
+      c7_p: '<strong>España sigue en el Mundial</strong> y una de las noches veremos un partidazo todos juntos. 🇪🇸',
+      s_weather: "El tiempo que hará",
+      d_sun: "Dom", d_mon: "Lun", d_tue: "Mar", d_wed: "Mié", d_thu: "Jue",
+      wx_note: "Sol y buen tiempo · algo de nubes al final. ¡Verano asturiano!",
+      s_pack: "Lo imprescindible para las rutas",
+      p1: "Ropa deportiva y calzado de trekking (con agarre)",
+      p2: "Papol lleva mochila con agua, snacks y crema solar",
+      p3: "Un cortavientos ligero por si refresca",
+      p4: "Gorra y protección solar",
+      p5: "Bañador (¡y gorro de baño para el spa!)",
+      p6: "Algo mono para las comidas y cenas",
+      foot: "Nos lo vamos a pasar genial. 💚",
+      foot_sign: "Con cariño, Papol"
+    },
+    en: {
+      _htmllang: "en",
+      _pagetitle: "Shall we go, girls? · Torazo",
+      eyebrow: "A plan for three",
+      title: 'Shall we go, <em>girls</em>?',
+      sub: "A few days to switch off in Asturias — Sara, Laura and Papol",
+      lead: "I won't tell you everything… but here's a taste of <strong>what's coming</strong>. The where and the when, that's a surprise. 😏",
+      s_await: "What awaits us",
+      c1_h: "A charming hotel",
+      c1_p: 'We\'re staying at the <strong>Hostería de Torazo</strong>, in a gorgeous little village in inland Asturias.',
+      c2_h: "Pool and spa",
+      c2_p: 'There\'ll be a <strong>pool</strong> for a dip and a <strong>spa circuit</strong> to get us into full relax mode.',
+      c3_h: "Great food, lunch and dinner",
+      c3_p: 'We\'ll eat lunch and dinner at <strong>lovely spots</strong> — proper Asturian cooking. Come hungry.',
+      c4_h: "Three walks",
+      c4_p: 'We\'ll do <strong>three walks</strong> through woods, old watermills and the odd magical corner. (Nothing too long or too hard, easy going.)',
+      c5_h: "A surprise to break from the countryside",
+      c5_p: "One day we'll have a little <strong>&quot;rural detox&quot;</strong>… but I'm not telling you what it is. You'll see. 🤫",
+      c6_h: "Breakfast at the hotel",
+      c6_p: 'Every morning, <strong>breakfast at the hostería</strong> before we set off.',
+      c7_h: "Football night!",
+      c7_p: "<strong>Spain are still in the World Cup</strong> and one evening we'll watch a great match all together. 🇪🇸",
+      s_weather: "The weather ahead",
+      d_sun: "Sun", d_mon: "Mon", d_tue: "Tue", d_wed: "Wed", d_thu: "Thu",
+      wx_note: "Sunny and mild · a few clouds towards the end. Asturian summer!",
+      s_pack: "Walk essentials to pack",
+      p1: "Sportswear and hiking shoes (with grip)",
+      p2: "Papol carries a backpack with water, snacks and sunscreen",
+      p3: "A light windbreaker in case it cools down",
+      p4: "Cap and sunscreen",
+      p5: "Swimsuit (and a swim cap for the spa!)",
+      p6: "Something nice for lunches and dinners",
+      foot: "We're going to have a great time. 💚",
+      foot_sign: "With love, Papol"
+    }
+  };
+
+  function applyLang(lang) {
+    const dict = I18N[lang] || I18N.es;
+    document.documentElement.lang = dict._htmllang;
+    if (dict._pagetitle) document.title = dict._pagetitle;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const k = el.getAttribute("data-i18n");
+      if (dict[k] != null) el.textContent = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+      const k = el.getAttribute("data-i18n-html");
+      if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    document.querySelectorAll(".lang-switch button").forEach(b => {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem("torazo-lang", lang); } catch (e) {}
+  }
+
+  function detectLang() {
+    try {
+      const saved = localStorage.getItem("torazo-lang");
+      if (saved === "es" || saved === "en") return saved;
+    } catch (e) {}
+    const nav = (navigator.language || "es").toLowerCase();
+    return nav.startsWith("en") ? "en" : "es";
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach(b => {
+    b.addEventListener("click", () => applyLang(b.dataset.lang));
+  });
+  applyLang(detectLang());
+</script>
