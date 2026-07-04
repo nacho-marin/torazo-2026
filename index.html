@@ -601,13 +601,13 @@
   <!-- ===== METEO ===== -->
   <p class="section-label" data-i18n="s_weather">La previsión de esos días</p>
   <div class="weather">
-    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico">☀️</div><div class="tmax">30°</div><div class="tmin">18°</div><div class="rain">💧 6%</div></div>
-    <div class="wx hot"><div class="wd" data-i18n="d_mon">Lun 6</div><div class="ico">☀️</div><div class="tmax">33°</div><div class="tmin">18°</div><div class="rain">💧 2%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_tue">Mar 7</div><div class="ico">☀️</div><div class="tmax">27°</div><div class="tmin">17°</div><div class="rain">💧 4%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_wed">Mié 8</div><div class="ico">⛅</div><div class="tmax">26°</div><div class="tmin">16°</div><div class="rain">💧 19%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_thu">Jue 9</div><div class="ico">⛅</div><div class="tmax">26°</div><div class="tmin">16°</div><div class="rain">💧 18%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.dom">30°</div><div class="tmin" data-wx="tmin.dom">18°</div><div class="rain" data-wx="rain.dom">💧 6%</div></div>
+    <div class="wx hot"><div class="wd" data-i18n="d_mon">Lun 6</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.lun">{{tmax.lun}}°</div><div class="tmin" data-wx="tmin.lun">18°</div><div class="rain" data-wx="rain.lun">💧 2%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_tue">Mar 7</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.mar">27°</div><div class="tmin" data-wx="tmin.mar">17°</div><div class="rain" data-wx="rain.mar">💧 4%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_wed">Mié 8</div><div class="ico">⛅</div><div class="tmax" data-wx="tmax.mie">26°</div><div class="tmin" data-wx="tmin.mie">16°</div><div class="rain" data-wx="rain.mie">💧 19%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_thu">Jue 9</div><div class="ico">⛅</div><div class="tmax" data-wx="tmax.jue">26°</div><div class="tmin" data-wx="tmin.jue">16°</div><div class="rain" data-wx="rain.jue">💧 18%</div></div>
   </div>
-  <p class="wx-note" data-i18n-html="wx_note">Fuente: The Weather Channel. El <strong>lunes es el día más caluroso (33°)</strong> → lo dejamos de relax en el hotel, sin ruta.</p>
+  <p class="wx-note" data-i18n-html="wx_note">Fuente: The Weather Channel. El <strong>lunes es el día más caluroso ({{tmax.lun}}°)</strong> → lo dejamos de relax en el hotel, sin ruta.</p>
 
   <!-- ===== ALOJAMIENTO ===== -->
   <p class="section-label" data-i18n="s_room">Nuestro alojamiento</p>
@@ -656,7 +656,7 @@
       <div class="meta-row">
         <span class="chip hot" data-i18n="d1_c1">🧖 Reservar spa por teléfono</span>
         <span class="chip" data-i18n="d1_c2">🍽️ Comida y cena en el hotel</span>
-        <span class="chip">☀️ 30°</span>
+        <span class="chip">☀️ {{tmax.dom}}°</span>
       </div>
     </div>
   </article>
@@ -665,11 +665,11 @@
   <article class="day">
     <div class="day-head">
       <span class="day-date" data-i18n="d2_date">Lun 6 jul</span>
-      <h2 class="day-title"><span class="kicker" data-i18n="d2_kick">El día más caluroso (33°) · sin ruta</span><span data-i18n="d2_title">Día de piscina y pueblo</span></h2>
+      <h2 class="day-title"><span class="kicker" data-i18n="d2_kick">El día más caluroso ({{tmax.lun}}°) · sin ruta</span><span data-i18n="d2_title">Día de piscina y pueblo</span></h2>
       <span class="day-tag hotel" data-i18n="tag_hotel">🏡 Hotel</span>
     </div>
     <div class="day-body">
-      <p data-i18n-html="d2_p">Con 33° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.</p>
+      <p data-i18n-html="d2_p">Con {{tmax.lun}}° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.</p>
       <ul class="plan-list">
         <li data-i18n-html="d2_l1">Mañana de <strong>piscina exterior</strong> y tumbona.</li>
         <li data-i18n-html="d2_l2"><strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel), sin coger a Mistiku. <em>(Los Llaureles, la otra opción en el pueblo, está cerrado hasta el 17 de julio.)</em></li>
@@ -681,7 +681,7 @@
         <span class="chip" data-i18n="d2_c1">🏊 Piscina exterior</span>
         <span class="chip" data-i18n="d2_c2">🍽️ Comida en el hotel</span>
         <span class="chip" data-i18n="d2_c3">🏘️ Torazo pueblo</span>
-        <span class="chip hot" data-i18n="d2_c4">☀️ 33° · el más caluroso</span>
+        <span class="chip hot" data-i18n="d2_c4">☀️ {{tmax.lun}}° · el más caluroso</span>
         <span class="chip hot" data-i18n="d2_c5">⚽ España–Portugal 21:00</span>
       </div>
     </div>
@@ -818,7 +818,7 @@
       <strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.
     </div>
     <div class="callout" data-i18n-html="pp_fan" style="margin-top:10px">
-      🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> para la habitación — con 33° el lunes, las noches se agradecen frescas.
+      🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> para la habitación — con {{tmax.lun}}° el lunes, las noches se agradecen frescas.
     </div>
   </div>
 
@@ -888,6 +888,25 @@
 </div>
 
 <script>
+  // ===== Fuente única de verdad para datos que se repiten =====
+  // Cambia un valor aquí y se propaga a TODAS sus apariciones (franja meteo, chips, textos).
+  const DATA = {
+    // Temperatura máxima por día
+    tmax: { dom: 30, lun: 33, mar: 27, mie: 26, jue: 26 },
+    // Temperatura mínima por día
+    tmin: { dom: 18, lun: 18, mar: 17, mie: 16, jue: 16 },
+    // Probabilidad de lluvia (%) por día
+    rain: { dom: 6, lun: 2, mar: 4, mie: 19, jue: 18 },
+  };
+
+  // Sustituye tokens {{ruta.clave}} por su valor en DATA (p.ej. {{tmax.lun}} -> 33)
+  function resolveTokens(str) {
+    return str.replace(/\{\{([a-zA-Z0-9_.]+)\}\}/g, (m, path) => {
+      const val = path.split(".").reduce((o, k) => (o == null ? o : o[k]), DATA);
+      return val == null ? m : val;
+    });
+  }
+
   const I18N = {
     es: {
       _htmllang: "es",
@@ -909,7 +928,7 @@
       prep5: "<b>Ropa &quot;de salir&quot;</b>Además del equipo de monte, un conjunto más arreglado para las comidas y cenas — El Balcón de Torazo y las sidrerías tienen su puntito.",
       s_weather: "La previsión de esos días",
       d_sun: "Dom 5", d_mon: "Lun 6", d_tue: "Mar 7", d_wed: "Mié 8", d_thu: "Jue 9",
-      wx_note: "Fuente: The Weather Channel. El <strong>lunes es el día más caluroso (33°)</strong> → lo dejamos de relax en el hotel, sin ruta.",
+      wx_note: "Fuente: The Weather Channel. El <strong>lunes es el día más caluroso ({{tmax.lun}}°)</strong> → lo dejamos de relax en el hotel, sin ruta.",
       s_room: "Nuestro alojamiento",
       room_lead: "Hostería de Torazo", room_h: "Una Family Room",
       room_p: "Nos alojamos en una <strong>Family Room</strong> de la hostería — <em>aún por confirmar cuál</em>. Habitaciones amplias pensadas para familias, con el encanto rural del hotel. <a href=\"https://www.hosteriadetorazo.com/habitaci-n-familiar\" target=\"_blank\" rel=\"noopener\">Ver habitación familiar ↗</a>",
@@ -931,14 +950,14 @@
       d1_l4: "Y si queda cuerpo, primer paseo por el <strong>casco del pueblo</strong> — Pueblo Ejemplar de Asturias 2008: la <strong>iglesia de San Martín el Real</strong> (s. XVI) y las <strong>casas de indianos</strong>, con sus fachadas de azulejos de colores traídas de América.",
       d1_l5: "<strong>Cena en El Balcón de Torazo</strong>, sin salir del hotel, para cerrar el primer día.",
       d1_c1: "🧖 Reservar spa por teléfono", d1_c2: "🍽️ Comida y cena en el hotel",
-      d2_date: "Lun 6 jul", d2_kick: "El día más caluroso (33°) · sin ruta", d2_title: "Día de piscina y pueblo",
-      d2_p: "Con 33° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.",
+      d2_date: "Lun 6 jul", d2_kick: "El día más caluroso ({{tmax.lun}}°) · sin ruta", d2_title: "Día de piscina y pueblo",
+      d2_p: "Con {{tmax.lun}}° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.",
       d2_l1: "Mañana de <strong>piscina exterior</strong> y tumbona.",
       d2_l2: "<strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel), sin coger a Mistiku. <em>(Los Llaureles, la otra opción en el pueblo, está cerrado hasta el 17 de julio.)</em>",
       d2_l3: "A la hora fresca, paseo distinto: la <strong>capilla de Nuestra Señora de la Sienra</strong> (s. XVIII) entre robledal —con su leyenda— y los <strong>caseríos de Miyangués y Grandeñu</strong>, con vistas hacia el <strong>Pico Incós</strong>, el techo del concejo.",
       d2_l4: "Tarde de lectura, siesta o un segundo baño. Cena sin prisa.",
       d2_l5: "⚽ <strong>¡España a octavos!</strong> Esta noche juega contra <strong>Portugal a las 21:00</strong> → cenar pronto y dejar la noche para ver el partido.",
-      d2_c1: "🏊 Piscina exterior", d2_c2: "🍽️ Comida en el hotel", d2_c3: "🏘️ Torazo pueblo", d2_c4: "☀️ 33° · el más caluroso", d2_c5: "⚽ España–Portugal 21:00",
+      d2_c1: "🏊 Piscina exterior", d2_c2: "🍽️ Comida en el hotel", d2_c3: "🏘️ Torazo pueblo", d2_c4: "☀️ {{tmax.lun}}° · el más caluroso", d2_c5: "⚽ España–Portugal 21:00",
       d3_date: "Mar 7 jul", d3_kick: "La ruta estrella · jornada completa", d3_title: "El Camín Encantáu",
       d3_p: "Día limpio y fresco (27°): el mejor para la ruta larga. Al oriente, en el Valle de Ardisana (Llanes), un sendero temático con <strong>tallas de madera a tamaño real de la mitología asturiana</strong> —el Trasgu, la Xana, el Nuberu, el Cuélebre, el Busgosu…— cada una con su leyenda. La más divertida de las tres.",
       d3_l1: "<strong>Salir pronto</strong>: es el trayecto de coche largo. Se aparca en <strong>La Venta</strong> (Ardisana).",
@@ -980,7 +999,7 @@
       film_toy_meta: "1 h 42 · TP",
       film_toy_p: "Los juguetes están de vuelta y esta vez se enfrentan a la tecnología, en la nueva aventura de Disney y Pixar.",
       pp_note: "<strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.",
-      pp_fan: "🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> para la habitación — con 33° el lunes, las noches se agradecen frescas.",
+      pp_fan: "🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> para la habitación — con {{tmax.lun}}° el lunes, las noches se agradecen frescas.",
       s_dinner: "Dónde cenar cerca",
       dinner_note: "Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a ~20 min). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.",
       dinner_th1: "Sidrería", dinner_th2: "Dónde", dinner_th3: "Cena",
@@ -1026,7 +1045,7 @@
       prep5: "<b>Something dressier</b>Besides the hiking gear, a smarter outfit for lunches and dinners — El Balcón de Torazo and the cider houses have a certain charm.",
       s_weather: "The forecast for those days",
       d_sun: "Sun 5", d_mon: "Mon 6", d_tue: "Tue 7", d_wed: "Wed 8", d_thu: "Thu 9",
-      wx_note: "Source: The Weather Channel. <strong>Monday is the hottest day (33°)</strong> → we keep it relaxed at the hotel, no walk.",
+      wx_note: "Source: The Weather Channel. <strong>Monday is the hottest day ({{tmax.lun}}°)</strong> → we keep it relaxed at the hotel, no walk.",
       s_room: "Where we're staying",
       room_lead: "Hostería de Torazo", room_h: "A Family Room",
       room_p: "We're staying in a <strong>Family Room</strong> at the hotel — <em>which one, still to be confirmed</em>. Spacious rooms designed for families, with the hotel's rural charm. <a href=\"https://www.hosteriadetorazo.com/habitaci-n-familiar\" target=\"_blank\" rel=\"noopener\">See the family room ↗</a>",
@@ -1048,14 +1067,14 @@
       d1_l4: "And if there's energy left, a first stroll around the <strong>village centre</strong> — an Exemplary Village of Asturias 2008: the <strong>San Martín el Real church</strong> (16th c.) and the <strong>indiano houses</strong>, with their colourful tiled façades brought back from the Americas.",
       d1_l5: "<strong>Dinner at El Balcón de Torazo</strong>, without leaving the hotel, to close the first day.",
       d1_c1: "🧖 Book spa by phone", d1_c2: "🍽️ Lunch & dinner at the hotel",
-      d2_date: "Mon 6 Jul", d2_kick: "The hottest day (33°) · no walk", d2_title: "Pool and village day",
-      d2_p: "With 33° forecast, it's the day to <strong>skip the walking</strong> and make the most of the hotel. Full switch-off mode.",
+      d2_date: "Mon 6 Jul", d2_kick: "The hottest day ({{tmax.lun}}°) · no walk", d2_title: "Pool and village day",
+      d2_p: "With {{tmax.lun}}° forecast, it's the day to <strong>skip the walking</strong> and make the most of the hotel. Full switch-off mode.",
       d2_l1: "Morning at the <strong>outdoor pool</strong> and a sun lounger.",
       d2_l2: "<strong>Lunch at El Balcón de Torazo</strong> (the hotel restaurant), no need for Mistiku. <em>(Los Llaureles, the other option in the village, is closed until 17 July.)</em>",
       d2_l3: "In the cool hours, a different walk: the <strong>Nuestra Señora de la Sienra chapel</strong> (18th c.) among oak woods —with its legend— and the <strong>hamlets of Miyangués and Grandeñu</strong>, with views towards <strong>Pico Incós</strong>, the highest point of the area.",
       d2_l4: "Afternoon of reading, a nap or a second swim. Unhurried dinner.",
       d2_l5: "⚽ <strong>Spain are through to the round of 16!</strong> Tonight they play <strong>Portugal at 21:00</strong> → early dinner and keep the evening for the match.",
-      d2_c1: "🏊 Outdoor pool", d2_c2: "🍽️ Lunch at the hotel", d2_c3: "🏘️ Torazo village", d2_c4: "☀️ 33° · the hottest", d2_c5: "⚽ Spain–Portugal 21:00",
+      d2_c1: "🏊 Outdoor pool", d2_c2: "🍽️ Lunch at the hotel", d2_c3: "🏘️ Torazo village", d2_c4: "☀️ {{tmax.lun}}° · the hottest", d2_c5: "⚽ Spain–Portugal 21:00",
       d3_date: "Tue 7 Jul", d3_kick: "The star walk · full day", d3_title: "El Camín Encantáu",
       d3_p: "A clear, cool day (27°): the best for the long walk. To the east, in the Ardisana Valley (Llanes), a themed trail with <strong>life-size wooden carvings of Asturian mythology</strong> —the Trasgu, the Xana, the Nuberu, the Cuélebre, the Busgosu…— each with its legend. The most fun of the three.",
       d3_l1: "<strong>Leave early</strong>: it's the long drive. Park at <strong>La Venta</strong> (Ardisana).",
@@ -1097,7 +1116,7 @@
       film_toy_meta: "1 h 42 · All ages",
       film_toy_p: "The toys are back, and this time they face off against technology, in Disney and Pixar's new adventure.",
       pp_note: "<strong>Wednesday it's open fine</strong> (it only closes on Sundays). Shops Mon–Sat 10:00–22:00; leisure and dining until midnight. We go in the afternoon, after the morning walk and lunch — and with 20% rain forecast, the indoor plan is spot on.",
-      pp_fan: "🌬️ <strong>Papol's errand:</strong> buy a <strong>powerful fan or a portable cooler</strong> at MediaMarkt for the room — with 33° on Monday, cool nights are welcome.",
+      pp_fan: "🌬️ <strong>Papol's errand:</strong> buy a <strong>powerful fan or a portable cooler</strong> at MediaMarkt for the room — with {{tmax.lun}}° on Monday, cool nights are welcome.",
       s_dinner: "Where to have dinner nearby",
       dinner_note: "On the nights we don't dine at the hotel, cider houses in the area (Villaviciosa ~20 min). <strong>Bedriñana and El Roxu</strong> are the safe bets; for the other two, better to confirm by phone.",
       dinner_th1: "Cider house", dinner_th2: "Where", dinner_th3: "Dinner",
@@ -1131,11 +1150,17 @@
     if (dict._pagetitle) document.title = dict._pagetitle;
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const k = el.getAttribute("data-i18n");
-      if (dict[k] != null) el.textContent = dict[k];
+      if (dict[k] != null) el.textContent = resolveTokens(dict[k]);
     });
     document.querySelectorAll("[data-i18n-html]").forEach(el => {
       const k = el.getAttribute("data-i18n-html");
-      if (dict[k] != null) el.innerHTML = dict[k];
+      if (dict[k] != null) el.innerHTML = resolveTokens(dict[k]);
+    });
+    // Rellenar las cifras de la franja de meteo desde DATA (fuente única)
+    document.querySelectorAll("[data-wx]").forEach(el => {
+      const [field, day] = el.getAttribute("data-wx").split(".");
+      const v = DATA[field] && DATA[field][day];
+      if (v != null) el.textContent = field === "rain" ? ("💧 " + v + "%") : (v + "°");
     });
     document.querySelectorAll(".lang-switch button").forEach(b => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
