@@ -5,8 +5,8 @@ Proyecto personal (no UbiqWare): guía visual de un viaje familiar a la **Hoster
 ## Entregable
 
 Dos páginas autocontenidas (CSS inline, fuentes nativas de Apple, sin dependencias externas ni CDN), servidas vía **GitHub Pages** (público, sin login — para que las hijas lo abran en el móvil):
-- **`index.html`** = **el teaser** → <https://nacho-marin.github.io/torazo-2026/> — resumen sin spoilers para Sara y Laura. **No menciona Parque Principado** (es sorpresa: "desintoxicación rural"). Es lo que sirve la raíz, a propósito.
-- **`plan-papol-torazo-idqyy4.html`** = **el plan completo** (para Papol) → URL con nombre poco adivinable, para que no se sirva por descuido al entrar en la raíz. Contiene el itinerario, restaurantes y la sorpresa (Parque Principado). No enlazar desde el teaser.
+- **`index.html`** = **el plan completo** → <https://nacho-marin.github.io/torazo-2026/> (la raíz, con todos los detalles; el usuario invirtió la disposición el 2026-07-04).
+- **`teaser.html`** = **el teaser** → <https://nacho-marin.github.io/torazo-2026/teaser.html> — resumen sin spoilers para Sara y Laura (no menciona Parque Principado: "desintoxicación rural" sorpresa).
 
 - El diseño es editorial-cálido: paleta verde musgo + óxido teja sobre papel cálido. Móvil-first.
 - Ambas llevan meta `http-equiv` de no-cache para que un refresco del navegador baste. **Ojo**: eso NO controla el CDN de GitHub Pages (~10 min de `max-age`, no configurable en Pages). Para saltarse el CDN al verificar, añadir `?v=<timestamp>` a la URL.
@@ -24,15 +24,15 @@ Dos páginas autocontenidas (CSS inline, fuentes nativas de Apple, sin dependenc
 
 ## Plan del viaje (reparto de días)
 
-Reparto ajustado a la previsión meteorológica real (The Weather Channel, consultada 2026-07-02): dom 30°, **lun 31° (día más caluroso)**, mar 27° seco, mié 27°/20% lluvia, jue 27°/18%. Criterio del usuario: evitar ruta el día más caluroso (lunes → hotel); Parque Principado el miércoles.
+Previsión (The Weather Channel, actualizada 2026-07-04): dom 30°/6%, **lun 33° (día más caluroso)**, mar 27°/4%, mié 26°/19%, jue 26°/18%. Criterio: evitar ruta el día más caluroso (lunes → hotel); Parque Principado el miércoles. **Los valores canónicos viven en el objeto `DATA` de `index.html`** — esta tabla es orientativa.
 
 | Día | Meteo | Plan |
 |---|---|---|
-| Dom 5 | 30° | Llegada + check-in + **comida en El Balcón** + **circuito termal Les Agües por la tarde** + (opcional) pueblo |
-| Lun 6 | **31°** | **Día de hotel** (el más caluroso, sin ruta): piscina exterior + **comida en El Balcón** (hotel; Los Llaureles cerrado hasta 17 jul) + Torazo pueblo + relax + **⚽ España–Portugal 21:00** (octavos; España clasificada) |
-| Mar 7 | 27° seco | **Camín Encantáu** (Ardisana, Llanes) — la ruta estrella, jornada completa (~1 h 15–30 de coche, ~9 km circular) |
-| Mié 8 | 27° / 20% | **Parte del Río Profundu de mañana** (Villaviciosa, ~20 min; se da la vuelta antes) + comida sidrería + **Parque Principado por la tarde**. La versión completa (la de 2020: ida por senda del río hasta Buslaz, vuelta por carretera) son ~19 km / media / 4h40 — queda como opción si se hace la jornada entera (sin Parque ese día). |
-| Jue 9 | 27° | Check-out + **ruta Misterios del Mar** (Colunga, de camino a casa) + vuelta |
+| Dom 5 | 30° | Llegada + check-in + **comida en El Balcón** + **circuito termal Les Agües por la tarde** + (opcional) casco del pueblo |
+| Lun 6 | **33°** | **Día de hotel** (sin ruta): piscina + **comida en El Balcón** (Los Llaureles cerrado hasta 17 jul) + capilla de la Sienra/caseríos + **⚽ España–Portugal 21:00** (octavos, confirmado) |
+| Mar 7 | 27° | **Camín Encantáu** (Ardisana, Llanes) — jornada completa (~1 h 15–1 h 30 de coche, ~9 km circular). Comida: picnic o Llanes (El Balamu / El Antoju). Tarde: relax + **masaje** (elegir de la carta del spa, reservar pronto) |
+| Mié 8 | 26°/19% | **Río Profundu** (corta ~1,5-2 h o larga 19 km/4h40; con la larga también da tiempo a Parque) + sidrería (~5 min del parking) + **Parque Principado**: cine (Spider-Man BND / Supergirl / Toy Story 5) + cena McDonald's + **recado: ventilador/cooler en MediaMarkt** |
+| Jue 9 | 26°/18% | Check-out + **Misterios del Mar** (Colunga, de camino) + vuelta a **Gijón (nuestra casa)** + **visita a la Abuelita Enedina (95 años)** por la tarde |
 
 **Tres rutas efectivas** (las nenas las quieren las tres): Camín Encantáu (mar), Río Profundu (mié mañana), **Misterios del Mar** (jue, de camino a casa tras el check-out). Misterios del Mar = Colunga, PR-AS 196, circular ~5,9 km, fácil, ~25-30 min, costera (acantilados, Sierra del Sueve, Lastres, playa de La Isla). Nota: discrepancia de desnivel entre fuentes (30 m FEMPA vs 183 m Turismo Colunga), sin reconciliar → no se pone cifra de desnivel. (Bimenes quedó descartada.)
 
@@ -43,11 +43,11 @@ Reparto ajustado a la previsión meteorológica real (The Weather Channel, consu
 
 - **Hostería de Torazo** 4★ · Plaza de la Sienra 1, 33310 Torazo (Cabranes) · **985 89 80 99** · reservas@hosteriadetorazo.com · hosteriadetorazo.com. Restaurante propio "El Balcón de Torazo" (4 tenedores). Circuito termal **Les Agües** (90 min): hidroterapia + sauna + hammam + zona relax. Piscina exterior confirmada. Acceso spa: gorro + chanclas obligatorios.
 - **Torazo**: Pueblo Ejemplar de Asturias **2008** (no 2007). Iglesia de **San Martín** (1685). Grafía asturiana oficial: "Torazu".
-- **Rutas** (ver detalle en `index.html`): Bimenes ~7 km circular; Río Profundu lineal (dar la vuelta a gusto); Camín Encantáu ~9 km circular con tallas mitológicas.
+- **Rutas** (detalle en `index.html`): Camín Encantáu ~9 km circular (tallas mitológicas); Río Profundu lineal, vuelta a gusto (larga: hasta Buslaz + carretera, 19 km/4h40); Misterios del Mar ~5,9 km circular costera. **Avituallamiento**: Panadería de Torazo y Casa Suárez (a pie), Alimerka Infiesto (~17 min), Mercadona Villaviciosa (~19 min). **Family Room** (por confirmar cuál).
 - **Clima julio**: ~22 °C máx, mes seco pero con orbayu. Maleta: trekking + chubasquero ligero + bañador/gorro/chanclas.
 
 ## ⚠️ Pendiente de reconfirmar antes del viaje
 
-- **LLAMAR al 985 89 80 99**: reservar sesión de spa; confirmar si hay piscina interior climatizada con chorros *aparte* del circuito de hidroterapia (la "piscina interior con chorros" que se recordaba es, casi seguro, la piscina de hidroterapia del spa); horarios reales de piscina/spa.
+- **LLAMAR al 985 89 80 99**: reservar circuito spa (dom tarde) + **masaje del martes** + preguntar horarios. (La piscina interior con chorros YA está confirmada como parte del circuito.)
 - Reconfirmar **tiempos de coche en Google Maps** la víspera (los del plan son estimaciones).
-- Comprobar previsión de **orbayu** por si toca activar el Plan B (Parque Principado).
+- **Seguimiento en vivo**: desde el 5 de julio, Nacho irá contando novedades para marcar hecho vs. planificado en la web.
