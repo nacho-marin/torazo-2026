@@ -344,12 +344,6 @@
   }
   a { color: var(--teja-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
-  .note {
-    font-size: 13px;
-    color: var(--ink-soft);
-    font-style: italic;
-    margin-top: 10px;
-  }
 
   footer {
     text-align: center;
@@ -601,11 +595,11 @@
   <!-- ===== METEO ===== -->
   <p class="section-label" data-i18n="s_weather">La previsión de esos días</p>
   <div class="weather">
-    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.dom">30°</div><div class="tmin" data-wx="tmin.dom">18°</div><div class="rain" data-wx="rain.dom">💧 6%</div></div>
-    <div class="wx hot"><div class="wd" data-i18n="d_mon">Lun 6</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.lun">{{tmax.lun}}°</div><div class="tmin" data-wx="tmin.lun">18°</div><div class="rain" data-wx="rain.lun">💧 2%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_tue">Mar 7</div><div class="ico">☀️</div><div class="tmax" data-wx="tmax.mar">27°</div><div class="tmin" data-wx="tmin.mar">17°</div><div class="rain" data-wx="rain.mar">💧 4%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_wed">Mié 8</div><div class="ico">⛅</div><div class="tmax" data-wx="tmax.mie">26°</div><div class="tmin" data-wx="tmin.mie">16°</div><div class="rain" data-wx="rain.mie">💧 19%</div></div>
-    <div class="wx"><div class="wd" data-i18n="d_thu">Jue 9</div><div class="ico">⛅</div><div class="tmax" data-wx="tmax.jue">26°</div><div class="tmin" data-wx="tmin.jue">16°</div><div class="rain" data-wx="rain.jue">💧 18%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico" data-wx="ico.dom">☀️</div><div class="tmax" data-wx="tmax.dom">30°</div><div class="tmin" data-wx="tmin.dom">18°</div><div class="rain" data-wx="rain.dom">💧 6%</div></div>
+    <div class="wx hot"><div class="wd" data-i18n="d_mon">Lun 6</div><div class="ico" data-wx="ico.lun">☀️</div><div class="tmax" data-wx="tmax.lun">{{tmax.lun}}°</div><div class="tmin" data-wx="tmin.lun">18°</div><div class="rain" data-wx="rain.lun">💧 2%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_tue">Mar 7</div><div class="ico" data-wx="ico.mar">☀️</div><div class="tmax" data-wx="tmax.mar">27°</div><div class="tmin" data-wx="tmin.mar">17°</div><div class="rain" data-wx="rain.mar">💧 4%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_wed">Mié 8</div><div class="ico" data-wx="ico.mie">⛅</div><div class="tmax" data-wx="tmax.mie">26°</div><div class="tmin" data-wx="tmin.mie">16°</div><div class="rain" data-wx="rain.mie">💧 19%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_thu">Jue 9</div><div class="ico" data-wx="ico.jue">⛅</div><div class="tmax" data-wx="tmax.jue">26°</div><div class="tmin" data-wx="tmin.jue">16°</div><div class="rain" data-wx="rain.jue">💧 18%</div></div>
   </div>
   <p class="wx-note" data-i18n-html="wx_note">Fuente: The Weather Channel. El <strong>lunes es el día más caluroso ({{tmax.lun}}°)</strong> → lo dejamos de relax en el hotel, sin ruta.</p>
 
@@ -656,7 +650,7 @@
       <div class="meta-row">
         <span class="chip hot" data-i18n="d1_c1">🧖 Reservar spa por teléfono</span>
         <span class="chip" data-i18n="d1_c2">🍽️ Comida y cena en el hotel</span>
-        <span class="chip">☀️ {{tmax.dom}}°</span>
+        <span class="chip"><span data-wx="ico.dom">☀️</span> <span data-wx="tmax.dom">30°</span></span>
       </div>
     </div>
   </article>
@@ -675,14 +669,14 @@
         <li data-i18n-html="d2_l2"><strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel), sin coger a Mistiku. <em>(Los Llaureles, la otra opción en el pueblo, está cerrado hasta el 17 de julio.)</em></li>
         <li data-i18n-html="d2_l3">A la hora fresca, paseo distinto: la <strong>capilla de Nuestra Señora de la Sienra</strong> (s. XVIII) entre robledal —con su leyenda— y los <strong>caseríos de Miyangués y Grandeñu</strong>, con vistas hacia el <strong>Pico Incós</strong>, el techo del concejo.</li>
         <li data-i18n-html="d2_l4">Tarde de lectura, siesta o un segundo baño. Cena sin prisa.</li>
-        <li data-i18n-html="d2_l5">⚽ <strong>¡España a octavos!</strong> Esta noche juega contra <strong>Portugal a las 21:00</strong> → cenar pronto y dejar la noche para ver el partido.</li>
+        <li data-i18n-html="d2_l5">⚽ <strong>¡España a octavos!</strong> Esta noche juega contra <strong>Portugal a las {{match.time}}</strong> → cenar pronto y dejar la noche para ver el partido.</li>
       </ul>
       <div class="meta-row">
         <span class="chip" data-i18n="d2_c1">🏊 Piscina exterior</span>
         <span class="chip" data-i18n="d2_c2">🍽️ Comida en el hotel</span>
         <span class="chip" data-i18n="d2_c3">🏘️ Torazo pueblo</span>
-        <span class="chip hot" data-i18n="d2_c4">☀️ {{tmax.lun}}° · el más caluroso</span>
-        <span class="chip hot" data-i18n="d2_c5">⚽ España–Portugal 21:00</span>
+        <span class="chip hot" data-i18n="d2_c4">{{ico.lun}} {{tmax.lun}}° · el más caluroso</span>
+        <span class="chip hot" data-i18n="d2_c5">⚽ España–Portugal {{match.time}}</span>
       </div>
     </div>
   </article>
@@ -703,11 +697,12 @@
         <li data-i18n-html="d3_l4">De vuelta, <strong>tarde/noche de relax en el hotel</strong>: piscina, spa o descansar las piernas. Buen momento para una <strong>sesión de masaje</strong> tras los 9 km — elegid de la <a href="https://nature-new.storage.googleapis.com/cms_multimedia/cms_medias/files/000/001/871/original/carta-spa-2026.-renovada_compressed.pdf?1782201027" target="_blank" rel="noopener">carta del spa ↗</a> (un descontracturante de piernas viene de perlas). <strong>Hay que elegir pronto para reservar.</strong> Cena tranquila.</li>
       </ul>
       <div class="meta-row">
-        <span class="chip hot" data-i18n-html="d3_c1">🚗 <span class="num">~1 h 15–1 h 30</span> de coche</span>
+        <span class="chip hot" data-i18n-html="d3_c1">🚗 <span class="num">{{drive.camin}}</span> de coche</span>
         <span class="chip tag-route" data-i18n="d3_c2">🥾 ~9 km circular · fácil</span>
         <span class="chip" data-i18n="d3_c3">🧺 Picnic o comer en Llanes</span>
         <span class="chip" data-i18n="d3_c4">🌙 Relax en el hotel</span>
         <span class="chip hot" data-i18n="d3_c5">💆 Masaje · reservar pronto</span>
+        <span class="chip"><span data-wx="ico.mar">☀️</span> <span data-wx="tmax.mar">27°</span></span>
         <a class="chip route-cta" href="https://www.turismoasturias.es/es/senderismo/rutas/familias/familias/el-camin-encantau" target="_blank" rel="noopener" data-i18n="see_route">Ver ruta ↗</a>
       </div>
     </div>
@@ -723,16 +718,17 @@
     <div class="day-body">
       <p data-i18n-html="d4_p"><strong>Mañana de ruta</strong> (aprovechando el fresco) y <strong>tarde de compras y cine</strong>. Con 20% de lluvia previsto, el plan techado de la tarde encaja de maravilla.</p>
       <ul class="plan-list">
-        <li data-i18n-html="d4_l1"><strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, ~20 min de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.</li>
+        <li data-i18n-html="d4_l1"><strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, {{drive.rio}} de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.</li>
         <li data-i18n-html="d4_l2"><strong>Dos opciones de ruta:</strong><br>• <strong>Corta</strong> (la del plan): senda del río y vuelta antes de llegar a Buslaz — <strong>~1,5-2 h</strong>.<br>• <strong>Larga</strong>: ida hasta Buslaz por la senda del río y vuelta por la carretera — <strong>~19 km, media, 4 h 40</strong>.<br>En ambos casos, saliendo pronto da tiempo a comer y llegar a <strong>Parque Principado</strong> por la tarde/noche (abre hasta medianoche).</li>
-        <li data-i18n-html="d4_l3"><strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>~5 min en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —"la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
-        <li data-i18n-html="d4_l4"><strong>Tarde — Parque Principado</strong> (~36 min): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.</li>
+        <li data-i18n-html="d4_l3"><strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>{{drive.sidreria}} en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —"la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
+        <li data-i18n-html="d4_l4"><strong>Tarde — Parque Principado</strong> ({{drive.parque}}): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.</li>
       </ul>
       <div class="meta-row">
-        <span class="chip" data-i18n-html="d4_c1">🚗 ruta <span class="num">~20 min</span></span>
+        <span class="chip" data-i18n-html="d4_c1">🚗 ruta <span class="num">{{drive.rio}}</span></span>
         <span class="chip tag-route" data-i18n="d4_c2">🥾 corta ~1,5-2 h · larga 19 km/4h40</span>
         <span class="chip" data-i18n="d4_c3">🍎 Comida sidrería</span>
         <span class="chip" data-i18n="d4_c4">🛍️ Parque Principado tarde</span>
+        <span class="chip"><span data-wx="ico.mie">⛅</span> <span data-wx="tmax.mie">26°</span></span>
         <a class="chip route-cta" href="https://www.losviajesdealifog.com/ruta-de-los-molinos-del-rio-profundu-villaviciosa/" target="_blank" rel="noopener" data-i18n="see_route">Ver ruta ↗</a>
       </div>
     </div>
@@ -749,7 +745,7 @@
       <p data-i18n-html="d5_p">La tercera ruta, aprovechando que Colunga queda de camino a casa. Una senda costera <strong>preciosa y fácil</strong> para despedir el viaje estirando las piernas junto al mar.</p>
       <ul class="plan-list">
         <li data-i18n-html="d5_l1">Desayuno con calma y <strong>check-out</strong> de la hostería.</li>
-        <li data-i18n-html="d5_l2">De camino a casa, parada en <strong>Colunga</strong> para la <strong>ruta Misterios del Mar</strong> (~25-30 min desde Torazo): circular de <strong>~5,9 km, fácil</strong>, con acantilados, la Sierra del Sueve, Lastres al fondo y la playa de La Isla al final.</li>
+        <li data-i18n-html="d5_l2">De camino a casa, parada en <strong>Colunga</strong> para la <strong>ruta Misterios del Mar</strong> ({{drive.misterios}} desde Torazo): circular de <strong>~5,9 km, fácil</strong>, con acantilados, la Sierra del Sueve, Lastres al fondo y la playa de La Isla al final.</li>
         <li data-i18n-html="d5_l3"><strong>Vuelta a casa, a Gijón</strong>, con las pilas cargadas. Y por la tarde, el mejor broche del viaje: <strong>visita a la Abuelita Enedina</strong> 💛 en sus <strong>95 años</strong>.</li>
       </ul>
       <div class="meta-row">
@@ -757,6 +753,7 @@
         <span class="chip tag-route" data-i18n="d5_c2">🥾 ~5,9 km circular · fácil</span>
         <span class="chip" data-i18n="d5_c3">🚗 Colunga de camino</span>
         <span class="chip hot" data-i18n="d5_c4">💛 Abuelita Enedina · 95 años</span>
+        <span class="chip"><span data-wx="ico.jue">⛅</span> <span data-wx="tmax.jue">26°</span></span>
         <a class="chip route-cta" href="https://www.turismocolunga.es/ruta/285-03-ruta-misterios-mar/" target="_blank" rel="noopener" data-i18n="d5_see">Ver Misterios del Mar ↗</a>
       </div>
     </div>
@@ -780,11 +777,11 @@
     <table class="tt">
       <thead><tr><th data-i18n="dist_th1">Destino</th><th style="text-align:right" data-i18n="dist_th2">Coche</th></tr></thead>
       <tbody>
-        <tr><td data-i18n="dist_r1">Molinos del Río Profundu (Villaviciosa)</td><td class="num">~20 min</td></tr>
+        <tr><td data-i18n="dist_r1">Molinos del Río Profundu (Villaviciosa)</td><td class="num" data-val="drive.rio">~20 min</td></tr>
         <tr><td data-i18n="dist_r2">Villaviciosa villa (sidrerías)</td><td class="num">~19 min</td></tr>
-        <tr><td data-i18n="dist_r3">Misterios del Mar (Colunga, alternativa)</td><td class="num">~25–30 min</td></tr>
-        <tr><td data-i18n="dist_r4">Parque Principado (mié tarde)</td><td class="num">~36 min</td></tr>
-        <tr><td data-i18n="dist_r5">Camín Encantáu (Ardisana, Llanes)</td><td class="num">~1 h 15–30</td></tr>
+        <tr><td data-i18n="dist_r3">Misterios del Mar (Colunga, alternativa)</td><td class="num" data-val="drive.misterios">~25–30 min</td></tr>
+        <tr><td data-i18n="dist_r4">Parque Principado (mié tarde)</td><td class="num" data-val="drive.parque">~36 min</td></tr>
+        <tr><td data-i18n="dist_r5">Camín Encantáu (Ardisana, Llanes)</td><td class="num" data-val="drive.camin">~1 h 15–1 h 30</td></tr>
       </tbody>
     </table>
   </div>
@@ -793,7 +790,7 @@
   <p class="section-label" data-i18n="s_pp">Desintoxicación urbana · miércoles tarde</p>
   <div class="panel">
     <h3><span class="lead">Parque Principado · Paredes de Siero</span><span data-i18n="pp_h">El respiro de ciudad</span></h3>
-    <p data-i18n-html="pp_p">Centro comercial grande (+160 tiendas en dos plantas) a ~36 min. La carta para un día de "no verde": <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.</p>
+    <p data-i18n-html="pp_p">Centro comercial grande (+160 tiendas en dos plantas) a {{drive.parque}}. La carta para un día de "no verde": <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.</p>
 
     <h3 style="margin-top:20px"><span class="lead" data-i18n="cine_lead">Tarde de cine + cena en el McDonald's</span><span data-i18n="cine_h">Qué echan el miércoles 🎬🍔</span></h3>
     <div class="films">
@@ -825,7 +822,7 @@
   <!-- ===== DÓNDE CENAR ===== -->
   <p class="section-label" data-i18n="s_dinner">Dónde cenar cerca</p>
   <div class="panel">
-    <p style="margin-bottom:14px" data-i18n-html="dinner_note">Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a ~20 min). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.</p>
+    <p style="margin-bottom:14px" data-i18n-html="dinner_note">Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a {{drive.rio}}). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.</p>
     <table class="tt">
       <thead><tr><th data-i18n="dinner_th1">Sidrería</th><th data-i18n="dinner_th2">Dónde</th><th style="text-align:right" data-i18n="dinner_th3">Cena</th></tr></thead>
       <tbody>
@@ -897,6 +894,12 @@
     tmin: { dom: 18, lun: 18, mar: 17, mie: 16, jue: 16 },
     // Probabilidad de lluvia (%) por día
     rain: { dom: 6, lun: 2, mar: 4, mie: 19, jue: 18 },
+    // Icono del cielo por día
+    ico: { dom: "☀️", lun: "☀️", mar: "☀️", mie: "⛅", jue: "⛅" },
+    // Tiempos de coche desde Torazo (o desde donde se indica)
+    drive: { rio: "~20 min", parque: "~36 min", camin: "~1 h 15–1 h 30", misterios: "~25–30 min", sidreria: "~5 min" },
+    // Partido de España (octavos)
+    match: { time: "21:00" },
   };
 
   // Sustituye tokens {{ruta.clave}} por su valor en DATA (p.ej. {{tmax.lun}} -> 33)
@@ -956,26 +959,26 @@
       d2_l2: "<strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel), sin coger a Mistiku. <em>(Los Llaureles, la otra opción en el pueblo, está cerrado hasta el 17 de julio.)</em>",
       d2_l3: "A la hora fresca, paseo distinto: la <strong>capilla de Nuestra Señora de la Sienra</strong> (s. XVIII) entre robledal —con su leyenda— y los <strong>caseríos de Miyangués y Grandeñu</strong>, con vistas hacia el <strong>Pico Incós</strong>, el techo del concejo.",
       d2_l4: "Tarde de lectura, siesta o un segundo baño. Cena sin prisa.",
-      d2_l5: "⚽ <strong>¡España a octavos!</strong> Esta noche juega contra <strong>Portugal a las 21:00</strong> → cenar pronto y dejar la noche para ver el partido.",
-      d2_c1: "🏊 Piscina exterior", d2_c2: "🍽️ Comida en el hotel", d2_c3: "🏘️ Torazo pueblo", d2_c4: "☀️ {{tmax.lun}}° · el más caluroso", d2_c5: "⚽ España–Portugal 21:00",
+      d2_l5: "⚽ <strong>¡España a octavos!</strong> Esta noche juega contra <strong>Portugal a las {{match.time}}</strong> → cenar pronto y dejar la noche para ver el partido.",
+      d2_c1: "🏊 Piscina exterior", d2_c2: "🍽️ Comida en el hotel", d2_c3: "🏘️ Torazo pueblo", d2_c4: "{{ico.lun}} {{tmax.lun}}° · el más caluroso", d2_c5: "⚽ España–Portugal {{match.time}}",
       d3_date: "Mar 7 jul", d3_kick: "La ruta estrella · jornada completa", d3_title: "El Camín Encantáu",
       d3_p: "Día limpio y fresco (27°): el mejor para la ruta larga. Al oriente, en el Valle de Ardisana (Llanes), un sendero temático con <strong>tallas de madera a tamaño real de la mitología asturiana</strong> —el Trasgu, la Xana, el Nuberu, el Cuélebre, el Busgosu…— cada una con su leyenda. La más divertida de las tres.",
       d3_l1: "<strong>Salir pronto</strong>: es el trayecto de coche largo. Se aparca en <strong>La Venta</strong> (Ardisana).",
       d3_l2: "<strong>Circular</strong> de ~9 km, desnivel suave (~250 m), fácil, 3–4 h con paradas para leer las leyendas.",
       d3_l3: "<strong>Comida</strong>: la ruta no tiene bares, así que <strong>picnic por el camino</strong> (de la mochila de Papol). Si preferís comer sentados, <strong>Llanes</strong> queda cerca al bajar: El Balamu (en el puerto, con vistas al mar) o una sidrería del centro como El Antoju. Ojo al volver con el tramo estrecho de la LL-14.",
       d3_l4: "De vuelta, <strong>tarde/noche de relax en el hotel</strong>: piscina, spa o descansar las piernas. Buen momento para una <strong>sesión de masaje</strong> tras los 9 km — elegid de la <a href=\"https://nature-new.storage.googleapis.com/cms_multimedia/cms_medias/files/000/001/871/original/carta-spa-2026.-renovada_compressed.pdf?1782201027\" target=\"_blank\" rel=\"noopener\">carta del spa ↗</a> (un descontracturante de piernas viene de perlas). <strong>Hay que elegir pronto para reservar.</strong> Cena tranquila.",
-      d3_c1: "🚗 <span class=\"num\">~1 h 15–1 h 30</span> de coche", d3_c2: "🥾 ~9 km circular · fácil", d3_c3: "🧺 Picnic o comer en Llanes", d3_c4: "🌙 Relax en el hotel", d3_c5: "💆 Masaje · reservar pronto",
+      d3_c1: "🚗 <span class=\"num\">{{drive.camin}}</span> de coche", d3_c2: "🥾 ~9 km circular · fácil", d3_c3: "🧺 Picnic o comer en Llanes", d3_c4: "🌙 Relax en el hotel", d3_c5: "💆 Masaje · reservar pronto",
       d4_date: "Mié 8 jul", d4_kick: "Ruta corta de mañana + desintoxicación urbana", d4_title: "Molinos + Parque Principado",
       d4_p: "<strong>Mañana de ruta</strong> (aprovechando el fresco) y <strong>tarde de compras y cine</strong>. Con 20% de lluvia previsto, el plan techado de la tarde encaja de maravilla.",
-      d4_l1: "<strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, ~20 min de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.",
+      d4_l1: "<strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, {{drive.rio}} de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.",
       d4_l2: "<strong>Dos opciones de ruta:</strong><br>• <strong>Corta</strong> (la del plan): senda del río y vuelta antes de llegar a Buslaz — <strong>~1,5-2 h</strong>.<br>• <strong>Larga</strong>: ida hasta Buslaz por la senda del río y vuelta por la carretera — <strong>~19 km, media, 4 h 40</strong>.<br>En ambos casos, saliendo pronto da tiempo a comer y llegar a <strong>Parque Principado</strong> por la tarde/noche (abre hasta medianoche).",
-      d4_l3: "<strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>~5 min en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —&quot;la mejor fabada del mundo&quot; 2014— o El Roxu (Solete Repsol).",
-      d4_l4: "<strong>Tarde — Parque Principado</strong> (~36 min): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.",
-      d4_c1: "🚗 ruta <span class=\"num\">~20 min</span>", d4_c2: "🥾 corta ~1,5-2 h · larga 19 km/4h40", d4_c3: "🍎 Comida sidrería", d4_c4: "🛍️ Parque Principado tarde",
+      d4_l3: "<strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>{{drive.sidreria}} en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —&quot;la mejor fabada del mundo&quot; 2014— o El Roxu (Solete Repsol).",
+      d4_l4: "<strong>Tarde — Parque Principado</strong> ({{drive.parque}}): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.",
+      d4_c1: "🚗 ruta <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 corta ~1,5-2 h · larga 19 km/4h40", d4_c3: "🍎 Comida sidrería", d4_c4: "🛍️ Parque Principado tarde",
       d5_date: "Jue 9 jul", d5_kick: "Ruta costera, casa y familia", d5_title: "Misterios del Mar y Abuelita Enedina",
       d5_p: "La tercera ruta, aprovechando que Colunga queda de camino a casa. Una senda costera <strong>preciosa y fácil</strong> para despedir el viaje estirando las piernas junto al mar.",
       d5_l1: "Desayuno con calma y <strong>check-out</strong> de la hostería.",
-      d5_l2: "De camino a casa, parada en <strong>Colunga</strong> para la <strong>ruta Misterios del Mar</strong> (~25-30 min desde Torazo): circular de <strong>~5,9 km, fácil</strong>, con acantilados, la Sierra del Sueve, Lastres al fondo y la playa de La Isla al final.",
+      d5_l2: "De camino a casa, parada en <strong>Colunga</strong> para la <strong>ruta Misterios del Mar</strong> ({{drive.misterios}} desde Torazo): circular de <strong>~5,9 km, fácil</strong>, con acantilados, la Sierra del Sueve, Lastres al fondo y la playa de La Isla al final.",
       d5_l3: "<strong>Vuelta a casa, a Gijón</strong>, con las pilas cargadas. Y por la tarde, el mejor broche del viaje: <strong>visita a la Abuelita Enedina</strong> 💛 en sus <strong>95 años</strong>.",
       d5_c1: "🧳 Check-out primero", d5_c2: "🥾 ~5,9 km circular · fácil", d5_c3: "🚗 Colunga de camino", d5_c4: "💛 Abuelita Enedina · 95 años", d5_see: "Ver Misterios del Mar ↗",
       s_spa: "El spa, con detalle",
@@ -989,7 +992,7 @@
       dist_r1: "Molinos del Río Profundu (Villaviciosa)", dist_r2: "Villaviciosa villa (sidrerías)", dist_r3: "Misterios del Mar (Colunga, alternativa)", dist_r4: "Parque Principado (mié tarde)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
       s_pp: "Desintoxicación urbana · miércoles tarde",
       pp_h: "El respiro de ciudad",
-      pp_p: "Centro comercial grande (+160 tiendas en dos plantas) a ~36 min. La carta para un día de &quot;no verde&quot;: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.",
+      pp_p: "Centro comercial grande (+160 tiendas en dos plantas) a {{drive.parque}}. La carta para un día de &quot;no verde&quot;: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.",
       cine_lead: "Tarde de cine + cena en el McDonald's", cine_h: "Qué echan el miércoles 🎬🍔",
       see_trailer: "▶ Ver tráiler",
       film_spidey_meta: "2 h 20 · +12",
@@ -1001,7 +1004,7 @@
       pp_note: "<strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.",
       pp_fan: "🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> para la habitación — con {{tmax.lun}}° el lunes, las noches se agradecen frescas.",
       s_dinner: "Dónde cenar cerca",
-      dinner_note: "Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a ~20 min). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.",
+      dinner_note: "Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a {{drive.rio}}). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.",
       dinner_th1: "Sidrería", dinner_th2: "Dónde", dinner_th3: "Cena",
       dinner_b1: "&quot;Mejor fabada del mundo&quot; 2014 · 985 89 11 52", dinner_o1: "✅ hasta 23:30",
       dinner_b2: "Solete Repsol · cierra dom noche y lunes · 984 83 31 97", dinner_o2: "✅ 20:00–23:30",
@@ -1073,26 +1076,26 @@
       d2_l2: "<strong>Lunch at El Balcón de Torazo</strong> (the hotel restaurant), no need for Mistiku. <em>(Los Llaureles, the other option in the village, is closed until 17 July.)</em>",
       d2_l3: "In the cool hours, a different walk: the <strong>Nuestra Señora de la Sienra chapel</strong> (18th c.) among oak woods —with its legend— and the <strong>hamlets of Miyangués and Grandeñu</strong>, with views towards <strong>Pico Incós</strong>, the highest point of the area.",
       d2_l4: "Afternoon of reading, a nap or a second swim. Unhurried dinner.",
-      d2_l5: "⚽ <strong>Spain are through to the round of 16!</strong> Tonight they play <strong>Portugal at 21:00</strong> → early dinner and keep the evening for the match.",
-      d2_c1: "🏊 Outdoor pool", d2_c2: "🍽️ Lunch at the hotel", d2_c3: "🏘️ Torazo village", d2_c4: "☀️ {{tmax.lun}}° · the hottest", d2_c5: "⚽ Spain–Portugal 21:00",
+      d2_l5: "⚽ <strong>Spain are through to the round of 16!</strong> Tonight they play <strong>Portugal at {{match.time}}</strong> → early dinner and keep the evening for the match.",
+      d2_c1: "🏊 Outdoor pool", d2_c2: "🍽️ Lunch at the hotel", d2_c3: "🏘️ Torazo village", d2_c4: "{{ico.lun}} {{tmax.lun}}° · the hottest", d2_c5: "⚽ Spain–Portugal {{match.time}}",
       d3_date: "Tue 7 Jul", d3_kick: "The star walk · full day", d3_title: "El Camín Encantáu",
       d3_p: "A clear, cool day (27°): the best for the long walk. To the east, in the Ardisana Valley (Llanes), a themed trail with <strong>life-size wooden carvings of Asturian mythology</strong> —the Trasgu, the Xana, the Nuberu, the Cuélebre, the Busgosu…— each with its legend. The most fun of the three.",
       d3_l1: "<strong>Leave early</strong>: it's the long drive. Park at <strong>La Venta</strong> (Ardisana).",
       d3_l2: "<strong>Loop</strong> of ~9 km, gentle climb (~250 m), easy, 3–4 h with stops to read the legends.",
       d3_l3: "<strong>Lunch</strong>: there are no bars on the trail, so <strong>a picnic along the way</strong> (from Papol's backpack). If you'd rather sit down, <strong>Llanes</strong> is close on the way down: El Balamu (at the harbour, with sea views) or a town cider house like El Antoju. Mind the narrow LL-14 stretch on the way back.",
       d3_l4: "Back at base, a <strong>relaxed afternoon/evening at the hotel</strong>: pool, spa or just resting the legs. A great moment for a <strong>massage</strong> after the 9 km — pick from the <a href=\"https://nature-new.storage.googleapis.com/cms_multimedia/cms_medias/files/000/001/871/original/carta-spa-2026.-renovada_compressed.pdf?1782201027\" target=\"_blank\" rel=\"noopener\">spa menu ↗</a> (a leg decontracting massage is perfect). <strong>Choose early to book.</strong> Quiet dinner.",
-      d3_c1: "🚗 <span class=\"num\">~1 h 15–1 h 30</span> drive", d3_c2: "🥾 ~9 km loop · easy", d3_c3: "🧺 Picnic or lunch in Llanes", d3_c4: "🌙 Relax at the hotel", d3_c5: "💆 Massage · book early",
+      d3_c1: "🚗 <span class=\"num\">{{drive.camin}}</span> drive", d3_c2: "🥾 ~9 km loop · easy", d3_c3: "🧺 Picnic or lunch in Llanes", d3_c4: "🌙 Relax at the hotel", d3_c5: "💆 Massage · book early",
       d4_date: "Wed 8 Jul", d4_kick: "Short morning walk + urban detox", d4_title: "Watermills + Parque Principado",
       d4_p: "<strong>Morning walk</strong> (making the most of the cool) and an <strong>afternoon of shopping and cinema</strong>. With 20% rain forecast, the indoor afternoon plan fits perfectly.",
-      d4_l1: "<strong>Morning — Río Profundu watermills</strong> (Villaviciosa, ~20 min from Torazo). Riverside woodland with 18–22 mills and the Molín de la Peña waterfall. Park at <strong>Valbúcar</strong> (Amandi) — go early, it fills up.",
+      d4_l1: "<strong>Morning — Río Profundu watermills</strong> (Villaviciosa, {{drive.rio}} from Torazo). Riverside woodland with 18–22 mills and the Molín de la Peña waterfall. Park at <strong>Valbúcar</strong> (Amandi) — go early, it fills up.",
       d4_l2: "<strong>Two route options:</strong><br>• <strong>Short</strong> (the plan's): the riverside path and back before reaching Buslaz — <strong>~1.5-2 h</strong>.<br>• <strong>Long</strong>: out to Buslaz along the riverside path and back by the road — <strong>~19 km, moderate, 4 h 40</strong>.<br>Either way, setting off early leaves time for lunch and <strong>Parque Principado</strong> in the afternoon/evening (open until midnight).",
-      d4_l3: "<strong>Lunch</strong> at a Villaviciosa cider house, <strong>~5 min by car</strong> from the trail car park (Valbúcar): Bedriñana —&quot;best fabada in the world&quot; 2014— or El Roxu (Repsol Solete).",
-      d4_l4: "<strong>Afternoon — Parque Principado</strong> (~36 min): shops (Zara, Primark, MediaMarkt…) and Cinesa cinemas with LUXE screens. Open until midnight.",
-      d4_c1: "🚗 walk <span class=\"num\">~20 min</span>", d4_c2: "🥾 short ~1.5-2 h · long 19 km/4h40", d4_c3: "🍎 Cider-house lunch", d4_c4: "🛍️ Parque Principado afternoon",
+      d4_l3: "<strong>Lunch</strong> at a Villaviciosa cider house, <strong>{{drive.sidreria}} by car</strong> from the trail car park (Valbúcar): Bedriñana —&quot;best fabada in the world&quot; 2014— or El Roxu (Repsol Solete).",
+      d4_l4: "<strong>Afternoon — Parque Principado</strong> ({{drive.parque}}): shops (Zara, Primark, MediaMarkt…) and Cinesa cinemas with LUXE screens. Open until midnight.",
+      d4_c1: "🚗 walk <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 short ~1.5-2 h · long 19 km/4h40", d4_c3: "🍎 Cider-house lunch", d4_c4: "🛍️ Parque Principado afternoon",
       d5_date: "Thu 9 Jul", d5_kick: "Coastal walk, home and family", d5_title: "Misterios del Mar & Grandma Enedina",
       d5_p: "The third walk, taking advantage of Colunga being on the way home. A <strong>gorgeous, easy</strong> coastal path to send off the trip with a stroll by the sea.",
       d5_l1: "Relaxed breakfast and <strong>check-out</strong> from the hotel.",
-      d5_l2: "On the way home, a stop in <strong>Colunga</strong> for the <strong>Misterios del Mar trail</strong> (~25-30 min from Torazo): a <strong>~5.9 km loop, easy</strong>, with cliffs, the Sueve mountains, Lastres in the distance and La Isla beach at the end.",
+      d5_l2: "On the way home, a stop in <strong>Colunga</strong> for the <strong>Misterios del Mar trail</strong> ({{drive.misterios}} from Torazo): a <strong>~5.9 km loop, easy</strong>, with cliffs, the Sueve mountains, Lastres in the distance and La Isla beach at the end.",
       d5_l3: "<strong>Back home to Gijón</strong>, batteries recharged. And in the afternoon, the best finish to the trip: <strong>a visit to Grandma Enedina</strong> 💛 on her <strong>95th birthday</strong>.",
       d5_c1: "🧳 Check-out first", d5_c2: "🥾 ~5.9 km loop · easy", d5_c3: "🚗 Colunga on the way", d5_c4: "💛 Grandma Enedina · 95", d5_see: "See Misterios del Mar ↗",
       s_spa: "The spa, in detail",
@@ -1106,7 +1109,7 @@
       dist_r1: "Río Profundu watermills (Villaviciosa)", dist_r2: "Villaviciosa town (cider houses)", dist_r3: "Misterios del Mar (Colunga, alternative)", dist_r4: "Parque Principado (Wed afternoon)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
       s_pp: "Urban detox · Wednesday afternoon",
       pp_h: "The city break",
-      pp_p: "A large shopping centre (+160 shops over two floors) ~36 min away. The menu for a &quot;no-green&quot; day: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… and the <strong>Cinesa cinemas</strong> with LUXE reclining seats.",
+      pp_p: "A large shopping centre (+160 shops over two floors) {{drive.parque}} away. The menu for a &quot;no-green&quot; day: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… and the <strong>Cinesa cinemas</strong> with LUXE reclining seats.",
       cine_lead: "Cinema afternoon + dinner at McDonald's", cine_h: "What's on Wednesday 🎬🍔",
       see_trailer: "▶ Watch trailer",
       film_spidey_meta: "2 h 20 · 12+",
@@ -1118,7 +1121,7 @@
       pp_note: "<strong>Wednesday it's open fine</strong> (it only closes on Sundays). Shops Mon–Sat 10:00–22:00; leisure and dining until midnight. We go in the afternoon, after the morning walk and lunch — and with 20% rain forecast, the indoor plan is spot on.",
       pp_fan: "🌬️ <strong>Papol's errand:</strong> buy a <strong>powerful fan or a portable cooler</strong> at MediaMarkt for the room — with {{tmax.lun}}° on Monday, cool nights are welcome.",
       s_dinner: "Where to have dinner nearby",
-      dinner_note: "On the nights we don't dine at the hotel, cider houses in the area (Villaviciosa ~20 min). <strong>Bedriñana and El Roxu</strong> are the safe bets; for the other two, better to confirm by phone.",
+      dinner_note: "On the nights we don't dine at the hotel, cider houses in the area (Villaviciosa {{drive.rio}}). <strong>Bedriñana and El Roxu</strong> are the safe bets; for the other two, better to confirm by phone.",
       dinner_th1: "Cider house", dinner_th2: "Where", dinner_th3: "Dinner",
       dinner_b1: "&quot;Best fabada in the world&quot; 2014 · 985 89 11 52", dinner_o1: "✅ until 23:30",
       dinner_b2: "Repsol Solete · closed Sun night & Mon · 984 83 31 97", dinner_o2: "✅ 20:00–23:30",
@@ -1160,7 +1163,12 @@
     document.querySelectorAll("[data-wx]").forEach(el => {
       const [field, day] = el.getAttribute("data-wx").split(".");
       const v = DATA[field] && DATA[field][day];
-      if (v != null) el.textContent = field === "rain" ? ("💧 " + v + "%") : (v + "°");
+      if (v != null) el.textContent = field === "rain" ? ("💧 " + v + "%") : (field === "ico" ? v : (v + "°"));
+    });
+    // Rellenar valores sueltos en HTML crudo desde DATA (fuente única)
+    document.querySelectorAll("[data-val]").forEach(el => {
+      const v = el.getAttribute("data-val").split(".").reduce((o, k) => (o == null ? o : o[k]), DATA);
+      if (v != null) el.textContent = v;
     });
     document.querySelectorAll(".lang-switch button").forEach(b => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
