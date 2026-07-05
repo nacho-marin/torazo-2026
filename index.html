@@ -603,7 +603,7 @@
   <!-- ===== METEO ===== -->
   <p class="section-label" data-i18n="s_weather">La previsión de esos días</p>
   <div class="weather">
-    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico" data-wx="ico.dom">☀️</div><div class="tmax" data-wx="tmax.dom">30°</div><div class="tmin" data-wx="tmin.dom">18°</div><div class="rain" data-wx="rain.dom">💧 6%</div></div>
+    <div class="wx"><div class="wd" data-i18n="d_sun">Dom 5</div><div class="ico" data-wx="ico.dom">☀️</div><div class="tmax" data-wx="tmax.dom">31°</div><div class="tmin" data-wx="tmin.dom">18°</div><div class="rain" data-wx="rain.dom">💧 6%</div></div>
     <div class="wx hot"><div class="wd" data-i18n="d_mon">Lun 6</div><div class="ico" data-wx="ico.lun">☀️</div><div class="tmax" data-wx="tmax.lun">{{tmax.lun}}°</div><div class="tmin" data-wx="tmin.lun">18°</div><div class="rain" data-wx="rain.lun">💧 2%</div></div>
     <div class="wx"><div class="wd" data-i18n="d_tue">Mar 7</div><div class="ico" data-wx="ico.mar">☀️</div><div class="tmax" data-wx="tmax.mar">27°</div><div class="tmin" data-wx="tmin.mar">17°</div><div class="rain" data-wx="rain.mar">💧 4%</div></div>
     <div class="wx"><div class="wd" data-i18n="d_wed">Mié 8</div><div class="ico" data-wx="ico.mie">⛅</div><div class="tmax" data-wx="tmax.mie">26°</div><div class="tmin" data-wx="tmin.mie">16°</div><div class="rain" data-wx="rain.mie">💧 19%</div></div>
@@ -649,16 +649,17 @@
     </div>
     <div class="day-body">
       <ul class="plan-list">
-        <li data-i18n-html="d1_l1"><strong>Check-in</strong> en la Hostería de Torazo y deshacer maletas.</li>
-        <li data-i18n-html="d1_l2"><strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel, cocina asturiana con vistas) para estrenar el viaje.</li>
-        <li data-i18n-html="d1_l3">Por la tarde, <strong>circuito termal "Les Agües"</strong> (90 min): hidroterapia con cascada y chorros, sauna, hammam y zona relax. El mejor arranque posible tras el viaje.</li>
+        <li data-i18n-html="d1_l1">✅ <strong>Check-in</strong> hecho a las 14:00 — maletas deshechas y modo vacaciones ON.</li>
+        <li data-i18n-html="d1_l2">✅ <strong>Comida en El Balcón de Torazo</strong> (14:30, con <strong>31°</strong> — superó los 30° previstos). Menús del día — <strong>Papol</strong>: salpicón de marisco + bonito con pisto; <strong>Sara</strong>: tacos de cochinita pibil + carrilleras con crema de calabaza; <strong>Laura</strong> (menú infantil): croquetas + cachopo. Postres: arroz con leche al estilo de Torazo (Sara y Papol) y helado de fresa (Laura). Agua para todos, Kas de naranja para Laura, Coca-Cola para Sara y vino tinto de la casa para Papol.</li>
+        <li data-i18n-html="d1_l6">✅ De 16:00 a media tarde, <strong>piscina exterior</strong> — buen rato de remojo (extra no planificado 😄).</li>
+        <li data-i18n-html="d1_l3">🕢 <strong>Circuito termal "Les Agües"</strong> (90 min) — ¡a las 19:30! Hidroterapia con cascada y chorros, sauna, hammam y zona relax.</li>
         <li data-i18n-html="d1_l4">Y si queda cuerpo, primer paseo por el <strong>casco del pueblo</strong> — Pueblo Ejemplar de Asturias 2008: la <strong>iglesia de San Martín el Real</strong> (s. XVI) y las <strong>casas de indianos</strong>, con sus fachadas de azulejos de colores traídas de América.</li>
         <li data-i18n-html="d1_l5"><strong>Cena en El Balcón de Torazo</strong>, sin salir del hotel, para cerrar el primer día.</li>
       </ul>
       <div class="meta-row">
-        <span class="chip hot" data-i18n="d1_c1">🧖 Reservar spa por teléfono</span>
+        <span class="chip hot" data-i18n="d1_c1">🧖 Spa Les Agües 19:30</span>
         <span class="chip" data-i18n="d1_c2">🍽️ Comida y cena en el hotel</span>
-        <span class="chip"><span data-wx="ico.dom">☀️</span> <span data-wx="tmax.dom">30°</span></span>
+        <span class="chip"><span data-wx="ico.dom">☀️</span> <span data-wx="tmax.dom">31°</span></span>
       </div>
     </div>
   </article>
@@ -897,7 +898,7 @@
   // Cambia un valor aquí y se propaga a TODAS sus apariciones (franja meteo, chips, textos).
   const DATA = {
     // Temperatura máxima por día
-    tmax: { dom: 30, lun: 33, mar: 27, mie: 26, jue: 26 },
+    tmax: { dom: 31, lun: 33, mar: 27, mie: 26, jue: 26 },
     // Temperatura mínima por día
     tmin: { dom: 18, lun: 18, mar: 17, mie: 16, jue: 16 },
     // Probabilidad de lluvia (%) por día
@@ -955,12 +956,13 @@
       tag_hotel: "🏡 Hotel", tag_route: "🥾 Ruta", tag_mix: "🥾 Ruta + 🛍️",
       see_route: "Ver ruta ↗",
       d1_date: "Dom 5 jul", d1_kick: "Llegada & primer chapuzón termal", d1_title: "Torazo, comida y spa",
-      d1_l1: "<strong>Check-in</strong> en la Hostería de Torazo y deshacer maletas.",
-      d1_l2: "<strong>Comida en El Balcón de Torazo</strong> (el restaurante del hotel, cocina asturiana con vistas) para estrenar el viaje.",
-      d1_l3: "Por la tarde, <strong>circuito termal &quot;Les Agües&quot;</strong> (90 min): hidroterapia con cascada y chorros, sauna, hammam y zona relax. El mejor arranque posible tras el viaje.",
+      d1_l1: "✅ <strong>Check-in</strong> hecho a las 14:00 — maletas deshechas y modo vacaciones ON.",
+      d1_l2: "✅ <strong>Comida en El Balcón de Torazo</strong> (14:30, con <strong>31°</strong> — superó los 30° previstos). Menús del día — <strong>Papol</strong>: salpicón de marisco + bonito con pisto; <strong>Sara</strong>: tacos de cochinita pibil + carrilleras con crema de calabaza; <strong>Laura</strong> (menú infantil): croquetas + cachopo. Postres: arroz con leche al estilo de Torazo (Sara y Papol) y helado de fresa (Laura). Agua para todos, Kas de naranja para Laura, Coca-Cola para Sara y vino tinto de la casa para Papol.",
+      d1_l6: "✅ De 16:00 a media tarde, <strong>piscina exterior</strong> — buen rato de remojo (extra no planificado 😄).",
+      d1_l3: "🕢 <strong>Circuito termal &quot;Les Agües&quot;</strong> (90 min) — ¡a las 19:30! Hidroterapia con cascada y chorros, sauna, hammam y zona relax.",
       d1_l4: "Y si queda cuerpo, primer paseo por el <strong>casco del pueblo</strong> — Pueblo Ejemplar de Asturias 2008: la <strong>iglesia de San Martín el Real</strong> (s. XVI) y las <strong>casas de indianos</strong>, con sus fachadas de azulejos de colores traídas de América.",
       d1_l5: "<strong>Cena en El Balcón de Torazo</strong>, sin salir del hotel, para cerrar el primer día.",
-      d1_c1: "🧖 Reservar spa por teléfono", d1_c2: "🍽️ Comida y cena en el hotel",
+      d1_c1: "🧖 Spa Les Agües 19:30", d1_c2: "🍽️ Comida y cena en el hotel",
       d2_date: "Lun 6 jul", d2_kick: "El día más caluroso ({{tmax.lun}}°) · sin ruta", d2_title: "Día de piscina y pueblo",
       d2_p: "Con {{tmax.lun}}° previstos, es el día para <strong>no salir a caminar</strong> y aprovechar la hostería a fondo. Modo desconexión total.",
       d2_l1: "Mañana de <strong>piscina exterior</strong> y tumbona.",
@@ -1072,12 +1074,13 @@
       tag_hotel: "🏡 Hotel", tag_route: "🥾 Walk", tag_mix: "🥾 Walk + 🛍️",
       see_route: "See route ↗",
       d1_date: "Sun 5 Jul", d1_kick: "Arrival & first thermal dip", d1_title: "Torazo, lunch and spa",
-      d1_l1: "<strong>Check-in</strong> at the Hostería de Torazo and unpack.",
-      d1_l2: "<strong>Lunch at El Balcón de Torazo</strong> (the hotel restaurant, Asturian cooking with views) to kick off the trip.",
-      d1_l3: "In the afternoon, the <strong>&quot;Les Agües&quot; thermal circuit</strong> (90 min): hydrotherapy with waterfall and jets, sauna, hammam and relax area. The best possible start after the drive.",
+      d1_l1: "✅ <strong>Check-in</strong> done at 14:00 — bags unpacked, holiday mode ON.",
+      d1_l2: "✅ <strong>Lunch at El Balcón de Torazo</strong> (14:30, at <strong>31°</strong> — above the forecast 30°). Set menus — <strong>Papol</strong>: seafood salpicón + bonito with pisto; <strong>Sara</strong>: cochinita pibil tacos + pork cheeks with pumpkin cream; <strong>Laura</strong> (kids&#39; menu): croquettes + cachopo. Desserts: Torazo-style rice pudding (Sara and Papol) and strawberry ice cream (Laura). Water all round, orange Kas for Laura, Coca-Cola for Sara and house red for Papol.",
+      d1_l6: "✅ From 16:00, <strong>outdoor pool</strong> — a good long soak (unplanned bonus 😄).",
+      d1_l3: "🕢 <strong>&quot;Les Agües&quot; thermal circuit</strong> (90 min) — at 19:30! Hydrotherapy with waterfall and jets, sauna, hammam and relax area.",
       d1_l4: "And if there's energy left, a first stroll around the <strong>village centre</strong> — an Exemplary Village of Asturias 2008: the <strong>San Martín el Real church</strong> (16th c.) and the <strong>indiano houses</strong>, with their colourful tiled façades brought back from the Americas.",
       d1_l5: "<strong>Dinner at El Balcón de Torazo</strong>, without leaving the hotel, to close the first day.",
-      d1_c1: "🧖 Book spa by phone", d1_c2: "🍽️ Lunch & dinner at the hotel",
+      d1_c1: "🧖 Les Agües spa 19:30", d1_c2: "🍽️ Lunch & dinner at the hotel",
       d2_date: "Mon 6 Jul", d2_kick: "The hottest day ({{tmax.lun}}°) · no walk", d2_title: "Pool and village day",
       d2_p: "With {{tmax.lun}}° forecast, it's the day to <strong>skip the walking</strong> and make the most of the hotel. Full switch-off mode.",
       d2_l1: "Morning at the <strong>outdoor pool</strong> and a sun lounger.",
