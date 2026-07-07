@@ -478,7 +478,6 @@
   }
   .day-tag.hotel { background: var(--sage-pale); color: var(--moss); }
   .day-tag.ruta { background: #f5e3d8; color: var(--teja-deep); }
-  .day-tag.mix { background: var(--paper-warm); color: var(--moss); border: 1px solid var(--line); }
 
   /* nota transversal (p. ej. desayunos) */
   .cross-note {
@@ -524,30 +523,6 @@
   }
   a.chip.route-cta:hover { background: var(--teja-deep); }
 
-  /* fichas de cine */
-  .films { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
-  .film {
-    background: var(--paper-warm); border: 1px solid var(--line);
-    border-radius: 12px; padding: 15px 16px;
-  }
-  .film-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-  .film h4 {
-    font-family: var(--serif); font-size: 18px; font-weight: 600;
-    margin: 0; letter-spacing: -0.01em; color: var(--ink);
-  }
-  .film .meta {
-    font-family: var(--mono); font-size: 11px; letter-spacing: .03em;
-    color: var(--moss); white-space: nowrap;
-  }
-  .film p { margin: 7px 0 12px; font-size: 14px; color: var(--ink-soft); }
-  .film .trailer {
-    display: inline-flex; align-items: center; gap: 7px;
-    font-family: var(--mono); font-size: 12.5px; font-weight: 600;
-    text-decoration: none; color: #fff; background: var(--teja);
-    padding: 7px 13px; border-radius: 8px; letter-spacing: .02em;
-  }
-  .film .trailer:hover { background: var(--teja-deep); }
-  .film .trailer:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
 </style>
 
 <div class="lang-switch" role="group" aria-label="Idioma / Language">
@@ -565,7 +540,6 @@
       <span class="fact" data-i18n="f_car">🚙 Mistiku</span>
       <span class="fact" data-i18n="f_routes">🥾 Rutas de molinos y mar</span>
       <span class="fact" data-i18n="f_spa">🧖 Spa Les Agües</span>
-      <span class="fact" data-i18n="f_shop">🛍️ Parque Principado</span>
     </div>
   </div>
 </header>
@@ -720,22 +694,22 @@
   <article class="day">
     <div class="day-head">
       <span class="day-date" data-i18n="d4_date">Mié 8 jul</span>
-      <h2 class="day-title"><span class="kicker" data-i18n="d4_kick">Ruta corta de mañana + desintoxicación urbana</span><span data-i18n="d4_title">Molinos + Parque Principado</span></h2>
-      <span class="day-tag mix" data-i18n="tag_mix">🥾 Ruta + 🛍️</span>
+      <h2 class="day-title"><span class="kicker" data-i18n="d4_kick">La ruta de los molinos · y doblete termal</span><span data-i18n="d4_title">Cascada del Molín de la Peña + spa</span></h2>
+      <span class="day-tag ruta" data-i18n="tag_route">🥾 Ruta</span>
     </div>
     <div class="day-body">
-      <p data-i18n-html="d4_p"><strong>Mañana de ruta</strong> (aprovechando el fresco) y <strong>tarde de compras y cine</strong>. Con 20% de lluvia previsto, el plan techado de la tarde encaja de maravilla.</p>
+      <p data-i18n-html="d4_p">Mañana de ruta con objetivo claro: la <strong>cascada del Molín de la Peña</strong>. Y por la tarde, sin Parque Principado: <strong>segunda sesión del circuito termal Les Agües</strong>. 🧖</p>
       <ul class="plan-list">
-        <li data-i18n-html="d4_l1"><strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, {{drive.rio}} de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.</li>
-        <li data-i18n-html="d4_l2"><strong>Dos opciones de ruta:</strong><br>• <strong>Corta</strong> (la del plan): senda del río y vuelta antes de llegar a Buslaz — <strong>~1,5-2 h</strong>.<br>• <strong>Larga</strong>: ida hasta Buslaz por la senda del río y vuelta por la carretera — <strong>~19 km, media, 4 h 40</strong>.<br>En ambos casos, saliendo pronto da tiempo a comer y llegar a <strong>Parque Principado</strong> por la tarde/noche (abre hasta medianoche).</li>
+        <li data-i18n-html="d4_l1"><strong>Salir pronto</strong> hacia <strong>Valbúcar</strong> (Amandi, {{drive.rio}} de Torazo) — el aparcamiento se llena. Tras la tormenta de ayer, <strong>barro seguro</strong>: calzado con agarre.</li>
+        <li data-i18n-html="d4_l2"><strong>Variante elegida: hasta la cascada y vuelta</strong> — <strong>~11,5 km</strong> (ida ~5,7 km), dificultad baja, <strong>~3 h 20</strong>. El propio autor de la guía avisa: de la cascada a Buslaz "no hay nada bonito".</li>
         <li data-i18n-html="d4_l3"><strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>{{drive.sidreria}} en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —"la mejor fabada del mundo" 2014— o El Roxu (Solete Repsol).</li>
-        <li data-i18n-html="d4_l4"><strong>Tarde — Parque Principado</strong> ({{drive.parque}}): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.</li>
+        <li data-i18n-html="d4_l4">🧖 <strong>Tarde: segunda ronda del circuito termal "Les Agües"</strong> — repetimos la fórmula del domingo, esta vez con las piernas cargaditas.</li>
       </ul>
       <div class="meta-row">
         <span class="chip" data-i18n-html="d4_c1">🚗 ruta <span class="num">{{drive.rio}}</span></span>
-        <span class="chip tag-route" data-i18n="d4_c2">🥾 corta ~1,5-2 h · larga 19 km/4h40</span>
+        <span class="chip tag-route" data-i18n="d4_c2">🥾 ~11,5 km · ~3 h 20 · cascada</span>
         <span class="chip" data-i18n="d4_c3">🍎 Comida sidrería</span>
-        <span class="chip" data-i18n="d4_c4">🛍️ Parque Principado tarde</span>
+        <span class="chip hot" data-i18n="d4_c4">🧖 Spa Les Agües (2ª)</span>
         <span class="chip"><span data-wx="ico.mie">⛅</span> <span data-wx="tmax.mie">26°</span></span>
         <a class="chip route-cta" href="https://www.losviajesdealifog.com/ruta-de-los-molinos-del-rio-profundu-villaviciosa/" target="_blank" rel="noopener" data-i18n="see_route">Ver ruta ↗</a>
       </div>
@@ -788,43 +762,9 @@
         <tr><td data-i18n="dist_r1">Molinos del Río Profundu (Villaviciosa)</td><td class="num" data-val="drive.rio">~20 min</td></tr>
         <tr><td data-i18n="dist_r2">Villaviciosa villa (sidrerías)</td><td class="num">~19 min</td></tr>
         <tr><td data-i18n="dist_r3">Misterios del Mar (Colunga, alternativa)</td><td class="num" data-val="drive.misterios">~25–30 min</td></tr>
-        <tr><td data-i18n="dist_r4">Parque Principado (mié tarde)</td><td class="num" data-val="drive.parque">~36 min</td></tr>
         <tr><td data-i18n="dist_r5">Camín Encantáu (Ardisana, Llanes)</td><td class="num" data-val="drive.camin">~1 h 15–1 h 30</td></tr>
       </tbody>
     </table>
-  </div>
-
-  <!-- ===== PARQUE PRINCIPADO ===== -->
-  <p class="section-label" data-i18n="s_pp">Desintoxicación urbana · miércoles tarde</p>
-  <div class="panel">
-    <h3><span class="lead">Parque Principado · Paredes de Siero</span><span data-i18n="pp_h">El respiro de ciudad</span></h3>
-    <p data-i18n-html="pp_p">Centro comercial grande (+160 tiendas en dos plantas) a {{drive.parque}}. La carta para un día de "no verde": <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.</p>
-
-    <h3 style="margin-top:20px"><span class="lead" data-i18n="cine_lead">Tarde de cine + cena en el McDonald's</span><span data-i18n="cine_h">Qué echan el miércoles 🎬🍔</span></h3>
-    <div class="films">
-      <div class="film">
-        <div class="film-top"><h4>Spider-Man: Brand New Day</h4><span class="meta" data-i18n="film_spidey_meta">2 h 20 · +12</span></div>
-        <p data-i18n="film_spidey_p">Han pasado cuatro años desde No Way Home: Peter es ahora un adulto que vive completamente solo, desaparecido de las vidas de quienes ama.</p>
-        <a class="trailer" href="https://www.youtube.com/watch?v=aBlsrtxuwss" target="_blank" rel="noopener"><span data-i18n="see_trailer">▶ Ver tráiler</span></a>
-      </div>
-      <div class="film">
-        <div class="film-top"><h4>Supergirl</h4><span class="meta" data-i18n="film_super_meta">1 h 49 · +12</span></div>
-        <p data-i18n="film_super_p">Cuando un adversario despiadado ataca demasiado cerca, Kara Zor-El (Supergirl) se une a regañadientes a un improbable compañero para un viaje épico.</p>
-        <a class="trailer" href="https://www.youtube.com/watch?v=s1-pfiVMKAs" target="_blank" rel="noopener"><span data-i18n="see_trailer">▶ Ver tráiler</span></a>
-      </div>
-      <div class="film">
-        <div class="film-top"><h4>Toy Story 5</h4><span class="meta" data-i18n="film_toy_meta">1 h 42 · TP</span></div>
-        <p data-i18n="film_toy_p">Los juguetes están de vuelta y esta vez se enfrentan a la tecnología, en la nueva aventura de Disney y Pixar.</p>
-        <a class="trailer" href="https://www.youtube.com/watch?v=7bRooHaffQs" target="_blank" rel="noopener"><span data-i18n="see_trailer">▶ Ver tráiler</span></a>
-      </div>
-    </div>
-
-    <div class="callout" data-i18n-html="pp_note">
-      <strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.
-    </div>
-    <div class="callout" data-i18n-html="pp_fan" style="margin-top:10px">
-      🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> — para casa, en Gijón; nos lo llevamos ya de vuelta.
-    </div>
   </div>
 
   <!-- ===== DÓNDE CENAR ===== -->
@@ -865,7 +805,6 @@
     <ul class="check" style="margin-bottom:20px">
       <li class="must" data-i18n="chk1">Llamar al hotel: reservar spa (dom) + masaje del martes + preguntar horarios</li>
       <li class="must" data-i18n="chk3">Reconfirmar tiempos en Google Maps la víspera</li>
-      <li data-i18n="chk4">Preparar picnic para el Camín Encantáu (mar 7)</li>
     </ul>
     <h3><span class="lead" data-i18n="check_lead2">Qué meter en la maleta</span><span data-i18n="check_h2">Julio asturiano</span></h3>
     <ul class="check">
@@ -905,9 +844,7 @@
     // Icono del cielo por día
     ico: { dom: "☀️", lun: "☀️", mar: "⛈️", mie: "⛅", jue: "⛅" },
     // Tiempos de coche desde Torazo (o desde donde se indica)
-    drive: { rio: "~20 min", parque: "~36 min", camin: "~1 h 15–1 h 30", misterios: "~25–30 min", sidreria: "~5 min" },
-    // Partido de España (octavos)
-    match: { time: "21:00" },
+    drive: { rio: "~20 min", camin: "~1 h 15–1 h 30", misterios: "~25–30 min", sidreria: "~5 min" },
   };
 
   // Sustituye tokens {{ruta.clave}} por su valor en DATA (p.ej. {{tmax.lun}} -> 33)
@@ -929,7 +866,6 @@
       f_car: "🚙 Mistiku",
       f_routes: "🥾 Rutas de molinos y mar",
       f_spa: "🧖 Spa Les Agües",
-      f_shop: "🛍️ Parque Principado",
       prep_lead: "Antes de meter todo en el coche",
       prep_h: "Lo imprescindible para las rutas",
       prep1: "<b>Ropa deportiva</b>Camiseta técnica, pantalón cómodo y <strong>calzado de trekking</strong> con agarre — las rutas de molinos embarran junto al río.",
@@ -952,7 +888,7 @@
       food_r4a: "Mercadona (Villaviciosa)<br><span style=\"font-size:12px;color:var(--ink-soft)\">C. Maximino Miyar, 3 · 33300</span>", food_r4b: "Supermercado, compra grande", food_r4c: "~19 min",
       s_plan: "El plan, día a día",
       breakfast: "<strong>Los desayunos son en el hotel</strong> todas las mañanas — buen combustible antes de cada plan.",
-      tag_hotel: "🏡 Hotel", tag_route: "🥾 Ruta", tag_mix: "🥾 Ruta + 🛍️",
+      tag_hotel: "🏡 Hotel", tag_route: "🥾 Ruta",
       see_route: "Ver ruta ↗",
       d1_date: "Dom 5 jul", d1_kick: "Llegada & primer chapuzón termal", d1_title: "Torazo, comida y spa",
       d1_l1: "✅ <strong>Check-in</strong> hecho a las 14:00 — maletas deshechas y modo vacaciones ON.",
@@ -977,13 +913,13 @@
       d3_l5: "✅ A las 20:00, remontada épica: <strong>Argentina 3-2 Egipto</strong> (perdía 0-2) ⚽",
       d3_l6: "🕙 Y para cerrar, <strong>cena en el hotel</strong>.",
       d3_c1: "🏊 Piscina de mañana", d3_c2: "🏘️ Pueblo ✅", d3_c3: "⛈️ Tormenta · 20°", d3_c4: "💆 Masajes ✅", d3_c5: "⚽ Argentina 3-2 Egipto",
-      d4_date: "Mié 8 jul", d4_kick: "Ruta corta de mañana + desintoxicación urbana", d4_title: "Molinos + Parque Principado",
-      d4_p: "<strong>Mañana de ruta</strong> (aprovechando el fresco) y <strong>tarde de compras y cine</strong>. Con 20% de lluvia previsto, el plan techado de la tarde encaja de maravilla.",
-      d4_l1: "<strong>Mañana — Molinos del Río Profundu</strong> (Villaviciosa, {{drive.rio}} de Torazo). Bosque de ribera con 18-22 molinos y la cascada del Molín de la Peña. Se aparca en <strong>Valbúcar</strong> (Amandi) — id pronto, se llena.",
-      d4_l2: "<strong>Dos opciones de ruta:</strong><br>• <strong>Corta</strong> (la del plan): senda del río y vuelta antes de llegar a Buslaz — <strong>~1,5-2 h</strong>.<br>• <strong>Larga</strong>: ida hasta Buslaz por la senda del río y vuelta por la carretera — <strong>~19 km, media, 4 h 40</strong>.<br>En ambos casos, saliendo pronto da tiempo a comer y llegar a <strong>Parque Principado</strong> por la tarde/noche (abre hasta medianoche).",
+      d4_date: "Mié 8 jul", d4_kick: "La ruta de los molinos · y doblete termal", d4_title: "Cascada del Molín de la Peña + spa",
+      d4_p: "Mañana de ruta con objetivo claro: la <strong>cascada del Molín de la Peña</strong>. Y por la tarde, sin Parque Principado: <strong>segunda sesión del circuito termal Les Agües</strong>. 🧖",
+      d4_l1: "<strong>Salir pronto</strong> hacia <strong>Valbúcar</strong> (Amandi, {{drive.rio}} de Torazo) — el aparcamiento se llena. Tras la tormenta de ayer, <strong>barro seguro</strong>: calzado con agarre.",
+      d4_l2: "<strong>Variante elegida: hasta la cascada y vuelta</strong> — <strong>~11,5 km</strong> (ida ~5,7 km), dificultad baja, <strong>~3 h 20</strong>. El propio autor de la guía avisa: de la cascada a Buslaz &quot;no hay nada bonito&quot;.",
       d4_l3: "<strong>Comida</strong> en una sidrería de Villaviciosa, a <strong>{{drive.sidreria}} en coche</strong> desde el aparcamiento de la ruta (Valbúcar): Bedriñana —&quot;la mejor fabada del mundo&quot; 2014— o El Roxu (Solete Repsol).",
-      d4_l4: "<strong>Tarde — Parque Principado</strong> ({{drive.parque}}): tiendas (Zara, Primark, MediaMarkt…) y cines Cinesa con salas LUXE. Abierto hasta medianoche.",
-      d4_c1: "🚗 ruta <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 corta ~1,5-2 h · larga 19 km/4h40", d4_c3: "🍎 Comida sidrería", d4_c4: "🛍️ Parque Principado tarde",
+      d4_l4: "🧖 <strong>Tarde: segunda ronda del circuito termal &quot;Les Agües&quot;</strong> — repetimos la fórmula del domingo, esta vez con las piernas cargaditas.",
+      d4_c1: "🚗 ruta <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 ~11,5 km · ~3 h 20 · cascada", d4_c3: "🍎 Comida sidrería", d4_c4: "🧖 Spa Les Agües (2ª)",
       d5_date: "Jue 9 jul", d5_kick: "Ruta costera, casa y familia", d5_title: "Misterios del Mar y Abuelita Enedina",
       d5_p: "La tercera ruta, aprovechando que Colunga queda de camino a casa. Una senda costera <strong>preciosa y fácil</strong> para despedir el viaje estirando las piernas junto al mar.",
       d5_l1: "Desayuno con calma y <strong>check-out</strong> de la hostería.",
@@ -998,20 +934,7 @@
       s_dist: "Tiempos de coche desde Torazo",
       dist_note: "Estimaciones sin tráfico — contrastad en Google Maps el día de salida.",
       dist_th1: "Destino", dist_th2: "Coche",
-      dist_r1: "Molinos del Río Profundu (Villaviciosa)", dist_r2: "Villaviciosa villa (sidrerías)", dist_r3: "Misterios del Mar (Colunga, alternativa)", dist_r4: "Parque Principado (mié tarde)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
-      s_pp: "Desintoxicación urbana · miércoles tarde",
-      pp_h: "El respiro de ciudad",
-      pp_p: "Centro comercial grande (+160 tiendas en dos plantas) a {{drive.parque}}. La carta para un día de &quot;no verde&quot;: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… y los <strong>cines Cinesa</strong> con salas LUXE de butacas reclinables.",
-      cine_lead: "Tarde de cine + cena en el McDonald's", cine_h: "Qué echan el miércoles 🎬🍔",
-      see_trailer: "▶ Ver tráiler",
-      film_spidey_meta: "2 h 20 · +12",
-      film_spidey_p: "Han pasado cuatro años desde No Way Home: Peter es ahora un adulto que vive completamente solo, desaparecido de las vidas de quienes ama.",
-      film_super_meta: "1 h 49 · +12",
-      film_super_p: "Cuando un adversario despiadado ataca demasiado cerca, Kara Zor-El (Supergirl) se une a regañadientes a un improbable compañero para un viaje épico.",
-      film_toy_meta: "1 h 42 · TP",
-      film_toy_p: "Los juguetes están de vuelta y esta vez se enfrentan a la tecnología, en la nueva aventura de Disney y Pixar.",
-      pp_note: "<strong>El miércoles abre bien</strong> (solo cierra los domingos). Tiendas L–S 10:00–22:00; ocio y restauración hasta medianoche. Vamos por la tarde, tras la ruta de mañana y la comida — y con el 20% de lluvia previsto, el plan techado viene de perlas.",
-      pp_fan: "🌬️ <strong>Recado de Papol:</strong> comprar en el MediaMarkt un <strong>ventilador potente o un climatizador portátil</strong> — para casa, en Gijón; nos lo llevamos ya de vuelta.",
+      dist_r1: "Molinos del Río Profundu (Villaviciosa)", dist_r2: "Villaviciosa villa (sidrerías)", dist_r3: "Misterios del Mar (Colunga, alternativa)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
       s_dinner: "Dónde cenar cerca",
       dinner_note: "Las noches que no cenemos en el hotel, sidrerías de la comarca (Villaviciosa a {{drive.rio}}). <strong>Bedriñana y El Roxu</strong> son las apuestas seguras; las otras dos, mejor confirmar por teléfono.",
       dinner_th1: "Sidrería", dinner_th2: "Dónde", dinner_th3: "Cena",
@@ -1023,7 +946,6 @@
       check_lead1: "Reservas y llamadas", check_h1: "Lo que conviene cerrar antes",
       chk1: "Llamar al hotel: reservar spa (dom) + masaje del martes + preguntar horarios",
       chk3: "Reconfirmar tiempos en Google Maps la víspera",
-      chk4: "Preparar picnic para el Camín Encantáu (mar 7)",
       check_lead2: "Qué meter en la maleta", check_h2: "Julio asturiano",
       pk1: "Calzado de trekking (las tres rutas embarran)",
       pk2: "Cortavientos / chubasquero ligero (orbayu)",
@@ -1047,7 +969,6 @@
       f_car: "🚙 Mistiku",
       f_routes: "🥾 Watermill & sea walks",
       f_spa: "🧖 Les Agües spa",
-      f_shop: "🛍️ Parque Principado",
       prep_lead: "Before packing the car",
       prep_h: "Walk essentials",
       prep1: "<b>Sportswear</b>Technical tee, comfy trousers and <strong>hiking shoes</strong> with grip — the watermill trails get muddy by the river.",
@@ -1070,7 +991,7 @@
       food_r4a: "Mercadona (Villaviciosa)<br><span style=\"font-size:12px;color:var(--ink-soft)\">C. Maximino Miyar, 3 · 33300</span>", food_r4b: "Supermarket, big shop", food_r4c: "~19 min",
       s_plan: "The plan, day by day",
       breakfast: "<strong>Breakfast is at the hotel</strong> every morning — good fuel before each plan.",
-      tag_hotel: "🏡 Hotel", tag_route: "🥾 Walk", tag_mix: "🥾 Walk + 🛍️",
+      tag_hotel: "🏡 Hotel", tag_route: "🥾 Walk",
       see_route: "See route ↗",
       d1_date: "Sun 5 Jul", d1_kick: "Arrival & first thermal dip", d1_title: "Torazo, lunch and spa",
       d1_l1: "✅ <strong>Check-in</strong> done at 14:00 — bags unpacked, holiday mode ON.",
@@ -1095,13 +1016,13 @@
       d3_l5: "✅ At 20:00, an epic comeback: <strong>Argentina 3-2 Egypt</strong> (they were 0-2 down) ⚽",
       d3_l6: "🕙 And to finish, <strong>dinner at the hotel</strong>.",
       d3_c1: "🏊 Morning pool", d3_c2: "🏘️ Village ✅", d3_c3: "⛈️ Storm · 20°", d3_c4: "💆 Massages ✅", d3_c5: "⚽ Argentina 3-2 Egypt",
-      d4_date: "Wed 8 Jul", d4_kick: "Short morning walk + urban detox", d4_title: "Watermills + Parque Principado",
-      d4_p: "<strong>Morning walk</strong> (making the most of the cool) and an <strong>afternoon of shopping and cinema</strong>. With 20% rain forecast, the indoor afternoon plan fits perfectly.",
-      d4_l1: "<strong>Morning — Río Profundu watermills</strong> (Villaviciosa, {{drive.rio}} from Torazo). Riverside woodland with 18–22 mills and the Molín de la Peña waterfall. Park at <strong>Valbúcar</strong> (Amandi) — go early, it fills up.",
-      d4_l2: "<strong>Two route options:</strong><br>• <strong>Short</strong> (the plan's): the riverside path and back before reaching Buslaz — <strong>~1.5-2 h</strong>.<br>• <strong>Long</strong>: out to Buslaz along the riverside path and back by the road — <strong>~19 km, moderate, 4 h 40</strong>.<br>Either way, setting off early leaves time for lunch and <strong>Parque Principado</strong> in the afternoon/evening (open until midnight).",
+      d4_date: "Wed 8 Jul", d4_kick: "The watermill walk · and a thermal double", d4_title: "Molín de la Peña waterfall + spa",
+      d4_p: "A morning walk with a clear goal: the <strong>Molín de la Peña waterfall</strong>. And in the afternoon, no Parque Principado: a <strong>second session of the Les Agües thermal circuit</strong>. 🧖",
+      d4_l1: "<strong>Leave early</strong> for <strong>Valbúcar</strong> (Amandi, {{drive.rio}} from Torazo) — the parking fills up. After yesterday&#39;s storm, <strong>mud guaranteed</strong>: shoes with grip.",
+      d4_l2: "<strong>Chosen variant: to the waterfall and back</strong> — <strong>~11.5 km</strong> (~5.7 km each way), easy, <strong>~3 h 20</strong>. The guide&#39;s own author warns: from the waterfall to Buslaz &quot;there&#39;s nothing pretty&quot;.",
       d4_l3: "<strong>Lunch</strong> at a Villaviciosa cider house, <strong>{{drive.sidreria}} by car</strong> from the trail car park (Valbúcar): Bedriñana —&quot;best fabada in the world&quot; 2014— or El Roxu (Repsol Solete).",
-      d4_l4: "<strong>Afternoon — Parque Principado</strong> ({{drive.parque}}): shops (Zara, Primark, MediaMarkt…) and Cinesa cinemas with LUXE screens. Open until midnight.",
-      d4_c1: "🚗 walk <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 short ~1.5-2 h · long 19 km/4h40", d4_c3: "🍎 Cider-house lunch", d4_c4: "🛍️ Parque Principado afternoon",
+      d4_l4: "🧖 <strong>Afternoon: a second round of the &quot;Les Agües&quot; thermal circuit</strong> — Sunday&#39;s formula again, this time with well-worked legs.",
+      d4_c1: "🚗 walk <span class=\"num\">{{drive.rio}}</span>", d4_c2: "🥾 ~11.5 km · ~3 h 20 · waterfall", d4_c3: "🍎 Cider-house lunch", d4_c4: "🧖 Les Agües spa (2nd)",
       d5_date: "Thu 9 Jul", d5_kick: "Coastal walk, home and family", d5_title: "Misterios del Mar & Grandma Enedina",
       d5_p: "The third walk, taking advantage of Colunga being on the way home. A <strong>gorgeous, easy</strong> coastal path to send off the trip with a stroll by the sea.",
       d5_l1: "Relaxed breakfast and <strong>check-out</strong> from the hotel.",
@@ -1116,20 +1037,7 @@
       s_dist: "Drive times from Torazo",
       dist_note: "Estimates without traffic — double-check on Google Maps on the day.",
       dist_th1: "Destination", dist_th2: "Drive",
-      dist_r1: "Río Profundu watermills (Villaviciosa)", dist_r2: "Villaviciosa town (cider houses)", dist_r3: "Misterios del Mar (Colunga, alternative)", dist_r4: "Parque Principado (Wed afternoon)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
-      s_pp: "Urban detox · Wednesday afternoon",
-      pp_h: "The city break",
-      pp_p: "A large shopping centre (+160 shops over two floors) {{drive.parque}} away. The menu for a &quot;no-green&quot; day: <strong>Zara, Primark, H&amp;M, Mango, MediaMarkt, Fnac</strong>… and the <strong>Cinesa cinemas</strong> with LUXE reclining seats.",
-      cine_lead: "Cinema afternoon + dinner at McDonald's", cine_h: "What's on Wednesday 🎬🍔",
-      see_trailer: "▶ Watch trailer",
-      film_spidey_meta: "2 h 20 · 12+",
-      film_spidey_p: "Four years after No Way Home: Peter is now an adult living entirely alone, gone from the lives of those he loves.",
-      film_super_meta: "1 h 49 · 12+",
-      film_super_p: "When a ruthless adversary strikes too close, Kara Zor-El (Supergirl) reluctantly teams up with an unlikely companion for an epic journey.",
-      film_toy_meta: "1 h 42 · All ages",
-      film_toy_p: "The toys are back, and this time they face off against technology, in Disney and Pixar's new adventure.",
-      pp_note: "<strong>Wednesday it's open fine</strong> (it only closes on Sundays). Shops Mon–Sat 10:00–22:00; leisure and dining until midnight. We go in the afternoon, after the morning walk and lunch — and with 20% rain forecast, the indoor plan is spot on.",
-      pp_fan: "🌬️ <strong>Papol's errand:</strong> buy a <strong>powerful fan or a portable cooler</strong> at MediaMarkt — for home, back in Gijón; we take it with us on the way back.",
+      dist_r1: "Río Profundu watermills (Villaviciosa)", dist_r2: "Villaviciosa town (cider houses)", dist_r3: "Misterios del Mar (Colunga, alternative)", dist_r5: "Camín Encantáu (Ardisana, Llanes)",
       s_dinner: "Where to have dinner nearby",
       dinner_note: "On the nights we don't dine at the hotel, cider houses in the area (Villaviciosa {{drive.rio}}). <strong>Bedriñana and El Roxu</strong> are the safe bets; for the other two, better to confirm by phone.",
       dinner_th1: "Cider house", dinner_th2: "Where", dinner_th3: "Dinner",
@@ -1141,7 +1049,6 @@
       check_lead1: "Bookings and calls", check_h1: "What to sort out first",
       chk1: "Call the hotel: book spa (Sun) + Tuesday massage + ask about hours",
       chk3: "Re-check drive times on Google Maps the day before",
-      chk4: "Prepare a picnic for the Camín Encantáu (Tue 7)",
       check_lead2: "What to pack", check_h2: "Asturian July",
       pk1: "Hiking shoes (all three walks get muddy)",
       pk2: "Light windbreaker / rain jacket (orbayu)",
